@@ -15,7 +15,8 @@
 ### All Changes
 - **chore**: sync upstream FPF-Spec (temporal claim adequacy + quantum-like cluster + E.9 DRR + A.19.* + recognizability)
 - **chore**: rebuild sections after upstream sync
-- **docs**: add
+- **docs**: add 'What's New' for upstream sync — describe user-facing additions
+- **fix**: complete truncated changelog entry from previous commit
 
 ## 2026-04-15
 
