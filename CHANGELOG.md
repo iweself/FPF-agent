@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-05-01
+
+### All Changes
+- **chore**: sync upstream FPF-Spec (temporal claim adequacy + quantum-like cluster + E.9 DRR + A.19.* + recognizability)
+
 ## 2026-04-15
 
 ### What's New
