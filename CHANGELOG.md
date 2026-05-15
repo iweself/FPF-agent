@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-05-15
+
+### All Changes
+- **chore**: sync upstream FPF — E.10.SEMIO + functional descriptions + A.15.4 + admissible action + A.6.P/F-G-R terminology cleanup
+
 ## 2026-05-01
 
 ### What's New
