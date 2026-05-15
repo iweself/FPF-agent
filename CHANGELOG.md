@@ -2,8 +2,15 @@
 
 ## 2026-05-15
 
+### What's New
+- FPF теперь упакован как полноценный плагин для Codex CLI: можно установить через marketplace командой `codex plugin marketplace add pokrovskiyv/FPF-agent` или локальным скриптом `python3 scripts/install_codex_plugin.py`. После установки навык работает из любой рабочей директории, а не только из корня репо FPF-agent
+- Новая команда установки: установщик копирует плагин в `~/plugins/fpf/` и регистрирует его в `~/.agents/plugins/marketplace.json` — обновления делаются через `git pull && python3 scripts/install_codex_plugin.py`
+- Свежая синхронизация с upstream FPF: добавлена ontology семиотической эпистемы (E.10.SEMIO), допустимые действия в проблемных ситуациях, функциональные описания и новый паттерн A.15.4 work-relevant source restoration, ужесточена терминология в кластере A.6.P и узле F-G-R
+
 ### All Changes
 - **chore**: sync upstream FPF — E.10.SEMIO + functional descriptions + A.15.4 + admissible action + A.6.P/F-G-R terminology cleanup
+- **chore**: rebuild sections after upstream sync
+- **feat**: package FPF as Codex CLI plugin with marketplace and installer
 
 ## 2026-05-01
 
