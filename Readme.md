@@ -26,16 +26,41 @@
 
 Система добавит marketplace и предложит установить плагин `fpf`. После установки навык доступен в любом проекте. Обновления подтягиваются автоматически при пушах в main.
 
-В Codex CLI:
+В Codex CLI можно добавить репозиторий как marketplace:
+
+```bash
+codex plugin marketplace add pokrovskiyv/FPF-agent
+```
+
+После добавления установите/включите плагин `fpf` в интерфейсе Codex.
+Репозиторий сам является корнем Codex-плагина: `.codex-plugin/plugin.json`
+лежит рядом с `.claude-plugin/plugin.json`, а навык берётся из
+`.agents/skills/fpf/`.
+
+Для локальной установки без marketplace UI:
 
 ```bash
 git clone https://github.com/pokrovskiyv/FPF-agent
 cd FPF-agent
-uv sync                              # один раз, ставит зависимости semantic_search
-codex                                # запускать из корня репо
+python3 scripts/install_codex_plugin.py
 ```
 
-Skill обнаружится автоматически через `$REPO_ROOT/.agents/skills/fpf/`. Триггер тот же самый — опиши задачу своими словами. Требуется [uv](https://docs.astral.sh/uv/) для локального FAISS-поиска. Для обновлений — `git pull`.
+Скрипт соберёт локальный пакет из корня репозитория в `~/plugins/fpf` и добавит запись в
+`~/.agents/plugins/marketplace.json`. После этого навык доступен в Codex CLI
+из любых рабочих директорий, а не только из корня этого репозитория. Для
+обновлений: `git pull`, затем снова `python3 scripts/install_codex_plugin.py`.
+
+Семантический fallback использует локальный FAISS-индекс. Если он ещё не
+построен, выполните один раз:
+
+```bash
+cd ~/plugins/fpf
+uv run scripts/build_embeddings.py
+```
+
+Маршрутные сценарии работают без индекса. Для семантического поиска требуется
+[uv](https://docs.astral.sh/uv/), который установит зависимости
+`sentence-transformers` и `faiss-cpu` при первом запуске.
 
 ---
 
@@ -578,6 +603,9 @@ FPF-agent/
 │   ├── fpf-reviewer.md       #   Ревьюер: жаргон-гард + обоснование
 │   └── fpf-sync.md           #   Синхронизатор: обновление из upstream
 ├── skills/fpf/SKILL.md       # Точка входа навыка Claude Code
+├── .agents/
+│   ├── skills/fpf/SKILL.md   # Точка входа навыка Codex
+│   └── plugins/marketplace.json # Marketplace Codex, указывает на корень repo
 ├── scripts/                  # Python-конвейер (stdlib, без зависимостей)
 │   ├── rebuild_all.sh        #   Полная пересборка
 │   ├── split_spec.py         #   Разбиение на секции
@@ -589,7 +617,8 @@ FPF-agent/
 │   ├── build_xrefs.py        #   Перекрёстные ссылки
 │   ├── build_embeddings.py   #   FAISS-индекс (uv run)
 │   └── semantic_search.py    #   Поиск по индексу (uv run)
-├── .claude-plugin/           # Манифест плагина
+├── .codex-plugin/            # Манифест Codex-плагина
+├── .claude-plugin/           # Манифест Claude Code-плагина
 └── .github/workflows/        # CI: автопересборка при изменении спецификации
 ```
 
