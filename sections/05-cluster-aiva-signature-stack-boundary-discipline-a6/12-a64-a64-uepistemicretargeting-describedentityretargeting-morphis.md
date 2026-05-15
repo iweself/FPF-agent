@@ -1,27 +1,27 @@
 ## A.6.4 - `U.EpistemicRetargeting` — describedEntity‑retargeting morphism
 
-**One‑line summary.** `U.EpistemicRetargeting` is the **describedEntity‑retargetning** species of `U.EffectFreeEpistemicMorphing`: an effect‑free episteme→episteme morphism that **intentionally changes what the episteme is about** (the occupant of `DescribedEntitySlot` in C.2.1) under a declared `KindBridge` and invariant, while remaining conservative with respect to that invariant.
+**One‑line summary.** `U.EpistemicRetargeting` is the **describedEntity-retargeting** species of `U.EffectFreeEpistemicMorphing`: an effect‑free episteme→episteme morphism that **intentionally changes what the episteme is about** (the occupant of `DescribedEntitySlot` in C.2.1) under a declared `KindBridge` and invariant, while remaining conservative with respect to that invariant.
 
-**Placement.** After **A.6.3 `U.EpistemicViewing`**, before **A.6.5 `U.RelationSlotDiscipline`**. 
+**Placement.** After **A.6.3 `U.EpistemicViewing`**, before **A.6.5 `U.RelationSlotDiscipline`**.
 
 **Builds on.**
 A.6.0 `U.Signature`; A.6.2 `U.EffectFreeEpistemicMorphing`; A.6.3 `U.EpistemicViewing`; A.6.5 `U.RelationSlotDiscipline`; A.7/E.10.D2 (I/D/S discipline, `DescriptionContext`); C.2.1 `U.Episteme — Epistemes and their slot graph`; C.2/C.3 (KD‑CAL/LOG‑CAL, ReferencePlane, Kind‑level reasoning); F.9 (Bridges, `KindBridge`, CL/CL^plane, SquareLaw witnesses).
 
 **Used by.**
-E.18 (E.TGA StructuralReinterpretation and other reinterpretation nodes); discipline packs for signal/spectrum transforms, data↔model retargetings, abstraction/refinement under kind‑invariants; KD‑CAL/LOG‑CAL retargeting rules; future species for architecture and governance reinterpretations. 
+E.18 (E.TGA StructuralReinterpretation and other reinterpretation nodes); discipline packs for signal/spectrum transforms, data↔model retargetings, abstraction/refinement under kind‑invariants; KD‑CAL/LOG‑CAL retargeting rules; additional species for architecture and governance reinterpretations.
 
 ### A.6.4:1 - Problem frame
 
-Many important operations on descriptions **change the object‑of‑talk** while preserving a structural or behavioural invariant:
+Many important operations on descriptions **change the described entity** while preserving a structural or behavioural invariant:
 
 * **Physical vs functional reinterpretation.**
-  An episteme about a physical module (cabinet, rack, device) is re‑interpreted as an episteme about a function‑holon it realises. This is precisely what StructuralReinterpretation nodes in E.TGA attempt to do. 
+  An episteme about a physical module (cabinet, rack, device) is re‑interpreted as an episteme about a function‑holon it realises. This is precisely what StructuralReinterpretation nodes in E.TGA attempt to do.
 
 * **Signal vs spectrum.**
-  A time‑domain signal description is re‑targeted to a description of its frequency‑domain spectrum. The underlying invariant (typically energy or inner‑product) is preserved, but the “thing we talk about” changes from `time→value` trajectories to `frequency→amplitude/phase` distributions. 
+  A time‑domain signal description is re‑targeted to a description of its frequency‑domain spectrum. The underlying invariant (typically energy or inner‑product) is preserved, but the described entity changes from `time→value` trajectories to `frequency→amplitude/phase` distributions.
 
 * **Data vs model.**
-  An episteme about raw observations (dataset) is turned into an episteme about a learned or estimated model, keeping an invariant such as likelihood, sufficient statistics, or predictive performance. 
+  An episteme about raw observations (dataset) is turned into an episteme about a learned or estimated model, keeping an invariant such as likelihood, sufficient statistics, or predictive performance.
 
 All of these are **Ep→Ep transforms** that:
 * do **not** change the Intension (`I`) directly (they operate on descriptions/specifications),
@@ -30,7 +30,7 @@ All of these are **Ep→Ep transforms** that:
 
 We need a single, reusable notion of **“epistemic retargeting”** that captures these operations as:
 * **effect‑free** at the level of Work/Mechanism (EFEM discipline),
-* **describedEntity‑retargeotating** in a controlled way,
+* **describedEntity-retargeting** in a controlled way,
 * **invariant‑conservative** (no violation of the declared invariant between kinds),
 * and **functorial** (retargetings compose cleanly and align with Bridges).
 
@@ -38,7 +38,7 @@ We need a single, reusable notion of **“epistemic retargeting”** that captur
 
 Without a dedicated pattern for EpistemicRetargeting:
 1. **Retargeting is silently confused with viewing.**
-   Structural reinterpretations (e.g., component→function, signal→spectrum, data→model) can be mistakenly treated as “just another view” of the same entity, even though they change `describedEntityRef`. This hides the fact that the **object‑of‑talk** has changed and that a `KindBridge` and invariant are required.
+   Structural reinterpretations (e.g., component→function, signal→spectrum, data→model) can be mistakenly treated as “just another view” of the same entity, even though they change `describedEntityRef`. This hides the fact that the **described entity** has changed and that a `KindBridge` and invariant are required.
 
 2. **Invariants float untyped.**
    Fourier‑style moves, structural reinterpretations, and abstraction/refinement steps are often justified by “energy is preserved”, “this component realises that function”, or “this model summarises those data” — but these invariants are not connected to the episteme morphism class. Without a dedicated species:
@@ -53,18 +53,18 @@ Without a dedicated pattern for EpistemicRetargeting:
    * nothing connects these moves to `KindBridge` and ReferencePlane policies.
 
 4. **StructuralReinterpretation is ad‑hoc.**
-   E.TGA currently hosts StructuralReinterpretation as a special node, but its semantics are much closer to a generic “retargeting under a bridge” pattern than to something specific to graph‑based architectures. Without a core pattern:
+   E.TGA treats StructuralReinterpretation as a graph node, but its semantics are much closer to a generic “retargeting under a bridge” pattern than to something specific to graph‑based architectures. Without a core pattern:
 
    * StructuralReinterpretation risks duplicating retargeting logic,
    * other discipline packs may reinvent their own ad‑hoc re‑targetings.
 
 5. **I/D/S discipline is left underspecified.**
-   For descriptions/specifications (`…Description` / `…Spec`), retargeting **changes `DescribedEntityRef` in `DescriptionContext = ⟨DescribedEntityRef, BoundedContextRef, ViewpointRef⟩`** (E.10.D2), but must say what happens to context and viewpoint. Without an explicit pattern, these decisions get scattered across different E‑patterns instead of being governed centrally. 
+   For descriptions/specifications (`…Description` / `…Spec`), retargeting **changes `DescribedEntityRef` in `DescriptionContext = ⟨DescribedEntityRef, BoundedContextRef, ViewpointRef⟩`** (E.10.D2), but must say what happens to context and viewpoint. Without an explicit pattern, these decisions get scattered across different E‑patterns instead of being governed centrally.
 
 ### A.6.4:3 - Forces
 
-* **Changing the object‑of‑talk vs constructing something new.**
-  Retargeting should express **“talking about a different but bridge‑related entity”**, not arbitrary construction of a new Intension/episteme. The invariant lives **across** the pair of entities, not inside a single episteme.
+* **Changing the described entity vs constructing something new.**
+  Retargeting should express **“describing a different but bridge-related entity through an explicit bridge”**, not arbitrary construction of a new Intension/episteme. The invariant lives **across** the pair of entities, not inside a single episteme.
 
 * **Invariants may be lossy but must be explicit.**
   A retargeting is often **lossy** (e.g. data→model, signal→spectrum, structural→functional view), but:
@@ -101,7 +101,7 @@ Without a dedicated pattern for EpistemicRetargeting:
 > * is **effect‑free** at the level of Work/Mechanism (EFEM discipline),
 > * and composes functorially with other retargetings and viewings.
 
-In C.2.1 terms, `U.EpistemicRetargeting` **re‑indexes** an episteme along a base‑level bridge: it moves the `DescribedEntitySlot` (and often the `<DescribedEntitySlot, GroundingHolonSlot>` bundle) along a `KindBridge`, while re‑expressing `content : U.ClaimGraph` and `referenceScheme` so that the declared invariant continues to hold at the new target. 
+In C.2.1 terms, `U.EpistemicRetargeting` **re‑indexes** an episteme along a base‑level bridge: it moves the `DescribedEntitySlot` (and often the `<DescribedEntitySlot, GroundingHolonSlot>` bundle) along a `KindBridge`, while re‑expressing `content : U.ClaimGraph` and `referenceScheme` so that the declared invariant continues to hold at the new target.
 
 #### A.6.4:4.2 - Signature (A.6.0 / A.6.5 alignment)
 
@@ -111,7 +111,7 @@ In C.2.1 terms, `U.EpistemicRetargeting` **re‑indexes** an episteme along a ba
 ```
 SubjectBlock
   SubjectKind    = U.EpistemicRetargeting
-  BaseType       = ⟨X:U.Episteme, Y:U.Episteme⟩      // carrier pair
+  BaseType       = ⟨X:U.Episteme, Y:U.Episteme⟩      // episteme pair
   Quantification = SliceSet := U.ContextSliceSet;
                    ExtentRule := admissible retargeting morphisms
   ResultKind     = U.Morphism                        // an instance r
@@ -143,11 +143,11 @@ The pattern only requires **SlotSpec compatibility** between domain and codomain
 
 * Every `U.EpistemicRetargeting` is an **EFEM morphism** with `describedEntityChangeMode = retarget` in the sense of A.6.2/C.2.1.
 * It **inherits** EFEM laws P0–P5 and adds retargeting‑specific obligations ER‑0…ER‑6 below.
-* `U.EpistemicViewing` (A.6.3) covers the complementary case `describedEntityChangeMode = preserve`, where the object‑of‑talk does not change.
+* `U.EpistemicViewing` (A.6.3) covers the complementary case `describedEntityChangeMode = preserve`, where the described entity does not change.
 
 #### A.6.4:4.3 - Laws (ER‑0…ER‑6, over C.2.1 components)
 
-All laws below are **in addition** to A.6.2’s EFEM laws P0–P5 and SHALL be read directly against C.2.1 components and A.6.5 SlotSpecs. 
+All laws below are **in addition** to A.6.2’s EFEM laws P0–P5 and SHALL be read directly against C.2.1 components and A.6.5 SlotSpecs.
 
 **ER‑0 - Species & DescribedEntityChangeMode.**
 
@@ -161,7 +161,7 @@ All laws below are **in addition** to A.6.2’s EFEM laws P0–P5 and SHALL be r
     * `describedEntityRef(X) = T₁`,
     * `describedEntityRef(Y) = T₂`,
     * `T₁ ≠ T₂` (as Ref/identity), and
-    * `Kind(T₁)` and `Kind(T₂)` are related by a `KindBridge` in Part F’s sense (with declared CL^k). 
+    * `Kind(T₁)` and `Kind(T₂)` are related by a `KindBridge` in Part F’s sense (with declared CL^k).
 
 **ER‑1 - Typed domain/codomain & DescribedEntity‑bundle behaviour.**
 
@@ -173,7 +173,7 @@ For any `r:X→Y` in `U.EpistemicRetargeting`:
 
    * `DescribedEntitySlot`:
      * **MUST change** (`describedEntityRef(Y) ≠ describedEntityRef(X)`),
-     * the ValueKinds for the slot in the domain and codomain kinds **MUST** be related via an `EoIClass` pair that the `KindBridge` covers (e.g. `PhysicalModule` ↔ `FunctionHolon`, `Signal` ↔ `Spectrum`, `Dataset` ↔ `StatisticalModel`). 
+     * the ValueKinds for the slot in the domain and codomain kinds **MUST** be related via an `EoIClass` pair that the `KindBridge` covers (e.g. `PhysicalModule` ↔ `FunctionHolon`, `Signal` ↔ `Spectrum`, `Dataset` ↔ `StatisticalModel`).
 
    * `GroundingHolonSlot`, if present:
      * is either preserved exactly (`groundingHolonRef(Y) = groundingHolonRef(X)`), or
@@ -190,9 +190,9 @@ For any `r:X→Y` in `U.EpistemicRetargeting`:
      * changed along an explicit Context‑Bridge (E.10.D1, Part F),
    * `ViewpointRef` is treated as in (2) above (preserved or mapped within a bundle), and any resulting change in admissible claims is governed by ER‑2.
 
-The pair `<DescribedEntitySlot, GroundingHolonSlot>` is treated as a **target bundle**: many practical retargetings work at the level of this bundle rather than DescribedEntity alone, especially in E.TGA. 
+The pair `<DescribedEntitySlot, GroundingHolonSlot>` is treated as a **target bundle**: many practical retargetings work at the level of this bundle rather than DescribedEntity alone, especially in E.TGA.
 
-**ER‑2 - Invariant‑based conservativity (lossy but lawful).**
+**ER‑2 - Invariant-based conservativity (lossy but admissible).**
 
 Let `X` and `Y = apply(r,X)` with:
 * `describedEntityRef(X) = T₁`, `describedEntityRef(Y) = T₂`,
@@ -205,12 +205,12 @@ Then:
 1. There MUST exist a KD‑CAL/LOG‑CAL expression of `Inv` such that:
    * all claims about `Inv` that can be derived by reading `content_Y` through `referenceScheme_Y` relative to `<T₂, groundingHolonRef_Y>`
      **are entailed by**
-     claims about `Inv` derivable from `content_X` through `referenceScheme_X` relative to `<T₁, groundingHolonRef_X>`. 
+     claims about `Inv` derivable from `content_X` through `referenceScheme_X` relative to `<T₁, groundingHolonRef_X>`.
 
 2. Retargeting, as an EFEM instance, **may**:
    * discard information not needed to maintain `Inv` (lossy summarisation),
    * change representation schemes (e.g. time vs frequency domain),
-   * move to different abstraction levels or ReferencePlanes (with Bridges and CL penalties declared),
+   * move to different abstraction planes or ReferencePlanes (with Bridges and CL penalties declared),
    but **MUST NOT** violate the declared invariant.
 
 3. Any intended change that **strengthens** commitments about `Inv` beyond what is derivable from `X` **is not a valid EpistemicRetargeting**. It must be modelled as:
@@ -304,13 +304,13 @@ Any attempt to apply a retargeting outside this Applicability profile is **ill�
 **Tell.**
 EpistemicRetargeting captures **“same invariant, different described entity”** moves:
 
-* we stop talking about “this cabinet” and start talking about “the routing function it realises”;
-* we stop talking about “this signal over time” and start talking about “its spectrum over frequency”;
-* we stop talking about “this dataset” and start talking about “a model class with parameters θ learned from it”.
+* the source episteme describes “this cabinet”, while the target episteme describes “the routing function it realises”;
+* the source episteme describes “this signal over time”, while the target episteme describes “its spectrum over frequency”;
+* the source episteme describes “this dataset”, while the target episteme describes “a model class with parameters θ learned from it”.
 
 In each case, what remains stable is an **invariant** (behaviour, energy, likelihood), not the described entity itself.
 
-**Show 1 — StructuralReinterpretation in E.TGA.** 
+**Show 1 — StructuralReinterpretation in E.TGA.**
 * `X` describes a physical module holon `S_phys`.
 * `Y` describes a function holon `S_func`.
 * A `KindBridge(S_phys, S_func)` expresses “this module realises that function”.
@@ -345,7 +345,7 @@ In each case, what remains stable is an **invariant** (behaviour, energy, likeli
   ReferencePlane crossings and kind‑level moves are handled via existing Bridges (Part F), with CL^plane/CL^k penalties and SquareLaw witnesses, instead of hidden in implementation details.
 
 * **Better integration with I/D/S.**
-  For `…Description`/`…Spec` epistemes, retargeting is the only place where `DescribedEntityRef` in `DescriptionContext` is allowed to change; all other I/D/S‑level operations (Describe/Specify, Viewing) keep it fixed. 
+  For `…Description`/`…Spec` epistemes, retargeting is the only place where `DescribedEntityRef` in `DescriptionContext` is allowed to change; all other I/D/S‑level operations (Describe/Specify, Viewing) keep it fixed.
 
 ### A.6.4:7 - Rationale & SoTA‑echoing  *(informative)*
 * **Fibrations and base‑change (displayed categories, 2017+).**

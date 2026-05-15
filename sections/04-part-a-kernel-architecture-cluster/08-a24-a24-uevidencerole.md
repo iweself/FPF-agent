@@ -69,6 +69,26 @@ The **normative properties** of the role (e.g., `claimRef`, `claimScope`, `polar
 
 
 ### A.2.4:5 - Role family and specialisations
+#### A.2.4:5.3 - Causal evidence-role specialisations
+
+For causal-use support, `U.EvidenceRole` may receive these context-local specialisations as evidence-role terms:
+
+```text
+InterventionEvidenceRole
+RealizedCounterfactualSampleEvidenceRole
+IdentifiedCounterfactualEstimateEvidenceRole
+SimulationOnlyCounterfactualOutputRole
+```
+
+These are evidence-role specialisations, not new evidence-source authorities. `identifiedCounterfactualEstimateSupportBasis` and `realizedCounterfactualSampleSupportBasis` are both counterfactual support bases but are not the same support basis. `SimulationOnlyCounterfactualOutputRole` may support `simulationOnlyCounterfactualOutputBasis` and bounded model-supported use under `C.28`; it never becomes `interventionalActionSupportBasis` or `realizedCounterfactualSampleSupportBasis` by vocabulary, validation, or role relabeling alone.
+
+What changes in practice: an episteme holding `SimulationOnlyCounterfactualOutputRole` cannot be relabelled as `RealizedCounterfactualSampleEvidenceRole` just because the simulation mentions a counterfactual; the role assignment must preserve whether the support basis is observation, intervention, realized counterfactual sample, identified counterfactual estimate, or simulation-only output.
+
+The corresponding `CausalEvidenceSupportBasis` values are governed by `C.28`: `observationalAssociationSupportBasis`, `interventionalActionSupportBasis`, `realizedCounterfactualSampleSupportBasis`, `identifiedCounterfactualEstimateSupportBasis`, and `simulationOnlyCounterfactualOutputBasis`. `A.2.4` only classifies evidence roles held by epistemes; it does not mint a second causal support-basis value set.
+
+What this does not authorize: `A.2.4` does not decide the causal-use question, estimand, identification, or counterfactual sampling realizability; it preserves evidence-role/source authority so `C.28` and `B.3` can judge the causal-use claim without vocabulary laundering.
+
+
 
 `U.EvidenceRole` is a **role kind** refined by **specialisation** (no mereology of roles). The recommended, substrate‑neutral specialisations are:
 
@@ -325,7 +345,7 @@ These operators extend E.6.1 citation graph capabilities for evidence analysis i
 A.2 `U.Role`, A.2.1 `U.RoleAssignment` (role as mask, binding as assignment), A.10 Evidence Graph Referring (EPV-DAG), B.3 Trust & Assurance Calculus.
 
 **Coordinates with:**
-A.3.2 `U.MethodDescription` (protocols, proof obligations), E.6.1 Epistemic Roles via `U.RoleAssignment` (didactic gateway).
+A.3.2 `U.MethodDescription` (protocols, proof obligations), E.6.1 Epistemic Roles via `U.RoleAssignment` (didactic gateway), `C.28` when an evidence role is used to support causal-use claims and must stay distinct as observational, interventional, realized counterfactual sample, identified counterfactual estimate, or simulation-only counterfactual output.
 
 **Informs:**
 KD-CAL (knowledge dynamics, assurance cases), Norm-CAL (policy claims with evidence), planned `U.PromiseFulfillmentEvaluation` (services judged from work and reported as epistemes with evidence bindings).
@@ -403,3 +423,4 @@ EvidenceRoleAssigning:
 10. **No role-of-role**: Is this role bound directly to an episteme without chaining behavioural roles?
 
 ### A.2.4:End
+

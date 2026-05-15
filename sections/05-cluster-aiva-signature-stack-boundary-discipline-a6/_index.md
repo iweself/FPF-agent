@@ -10,7 +10,7 @@
 - [A.6.3 - U.EpistemicViewing — describedEntity‑preserving morphism (A.6.3)](08-a63-a63-uepistemicviewing-describedentitypreserving-morphism.md)
 - [A.6.3.CSC - Controlled Semantic Coarsening (A.6.3.CSC)](09-a63csc-a63csc-controlled-semantic-coarsening.md)
 - [A.6.3.CR - ConservativeRetextualization — same-described-entity textual re-expression (A.6.3.CR)](10-a63cr-a63cr-conservativeretextualization-same-described-entity-tex.md)
-- [A.6.3.RT - RepresentationTransduction - same-described-entity representation-scheme transition (A.6.3.RT)](11-a63rt-a63rt-representationtransduction-same-described-entity-repre.md)
+- [A.6.3.RT - RepresentationTransduction — same-described-entity representation-scheme transition (A.6.3.RT)](11-a63rt-a63rt-representationtransduction-same-described-entity-repre.md)
 - [A.6.4 - U.EpistemicRetargeting — describedEntity‑retargeting morphism (A.6.4)](12-a64-a64-uepistemicretargeting-describedentityretargeting-morphis.md)
 - [A.6.P — U.RelationalPrecisionRestorationSuite — Relational Precision Restoration (RPR) — Kind‑Explicit Qualified Relation Discipline (A.6.P)](13-a6p-a6p-urelationalprecisionrestorationsuite-relational-precisio.md)
 - [A.6.Q - U.QualityTermPrecisionRestoration — Quality Term Precision Restoration (Q-TERM) (A.6.Q)](14-a6q-a6q-uqualitytermprecisionrestoration-quality-term-precision-.md)

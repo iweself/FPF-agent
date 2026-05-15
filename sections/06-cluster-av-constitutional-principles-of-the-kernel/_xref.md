@@ -1,6 +1,6 @@
 # Cross-References into 06-cluster-av-constitutional-principles-of-the-kernel
 
-Patterns in other Parts that reference patterns in this directory (146 refs).
+Patterns in other Parts that reference patterns in this directory (130 refs).
 
 ## From 04-part-a-kernel-architecture-cluster
 
@@ -32,6 +32,8 @@ Patterns in other Parts that reference patterns in this directory (146 refs).
 |--------|----------|--------|
 | A.6 | builds_on | A.7 |
 | A.6 | coordinates_with | A.10 |
+| A.6 | coordinates_with | A.15 |
+| A.6 | coordinates_with | A.20 |
 | A.6.2 | builds_on | A.7 |
 | A.6.3 | builds_on | A.7 |
 | A.6.3.CR | builds_on | A.7 |
@@ -69,6 +71,8 @@ Patterns in other Parts that reference patterns in this directory (146 refs).
 | B.1 | builds_on | A.9 |
 | B.1.6 | builds_on | A.15.1 |
 | B.3 | builds_on | A.10 |
+| B.3 | coordinates_with | A.15 |
+| B.3 | coordinates_with | A.20 |
 | B.4 | builds_on | A.12 |
 | B.4.1 | builds_on | A.16 |
 | B.4.1 | builds_on | A.16.1 |
@@ -112,54 +116,29 @@ Patterns in other Parts that reference patterns in this directory (146 refs).
 | C.26.3 | builds_on | A.15 |
 | C.26.3 | builds_on | A.10 |
 | C.26.3 | builds_on | A.19 |
-
-## From 11-section-ei-the-fpf-constitution
-
-| Source | Relation | Target |
-|--------|----------|--------|
+| C.28 | builds_on | A.10 |
+| C.28 | coordinates_with | A.15 |
 | D.2 | builds_on | A.9 |
-| E.10 | builds_on | A.7 |
-| E.10 | coordinates_with | A.10 |
-| E.10 | coordinates_with | A.15 |
 | E.10.D1 | builds_on | A.7 |
 | E.10.D2 | builds_on | A.7 |
 | E.15 | builds_on | A.10 |
 | E.16 | builds_on | A.13 |
 | E.16 | builds_on | A.15 |
 | E.17.1 | builds_on | A.7 |
-| E.17.AUD | builds_on | A.16.0 |
-| E.17.AUD | builds_on | A.7 |
-| E.17.AUD | coordinates_with | A.15 |
-| E.17.AUD | coordinates_with | A.20 |
-| E.17.AUD.LHR | builds_on | A.7 |
-| E.17.AUD.LHR | coordinates_with | A.15 |
-| E.17.AUD.LHR | coordinates_with | A.20 |
-| E.17.AUD.OOTD | builds_on | A.7 |
-| E.17.AUD.OOTD | builds_on | A.16.0 |
-| E.17.AUD.OOTD | coordinates_with | A.15 |
-| E.17.AUD.OOTD | coordinates_with | A.20 |
-| E.17.EFP | builds_on | A.7 |
-| E.17.EFP | coordinates_with | A.15 |
-| E.17.EFP | coordinates_with | A.20 |
-| E.17.ID.CR | builds_on | A.16.0 |
-| E.17.ID.CR | coordinates_with | A.15 |
-| E.17.ID.CR | coordinates_with | A.20 |
 | E.18 | builds_on | A.7 |
 | E.18 | coordinates_with | A.20 |
 | E.20 | coordinates_with | A.15.3 |
 
-## From 13-cluster-fi-context-of-meaning-raw-material
+## From 10-cluster-fi-context-of-meaning-raw-material
 
 | Source | Relation | Target |
 |--------|----------|--------|
 | F.1 | builds_on | A.7 |
 | F.11 | builds_on | A.15 |
-| F.18 | coordinates_with | A.17 |
-| F.18 | coordinates_with | A.18 |
 | F.6 | builds_on | A.15 |
 | F.9.1 | builds_on | A.16.0 |
 
-## From 14-part-g-discipline-sota-patterns-kit
+## From 11-part-g-discipline-sota-patterns-kit
 
 | Source | Relation | Target |
 |--------|----------|--------|

@@ -135,6 +135,39 @@ A successful probe does not by itself support a larger burn or a committed rollo
 * **ATC-7 (Notation/Vendor Independence).** Core pattern text **MUST NOT** encode vendor-specific tokens; bindings occur in Context via Bridges/Profiles. (Lexical guard-rails.)
 
 #### C.24:4.1a - Planning under budget must consume the same declared doctrine
+#### C.24:4.1b - Causal action-use spec for call plans
+
+When a tool-call plan selects observation, intervention, counterfactual-rung evidence collection, counterfactual policy conditioning, or off-policy causal evaluation work, the `CallPlan` carries an optional causal action-use spec and cites `C.28` for the causal-use authority.
+
+Optional `CallPlan.causalActionUseSpec?`:
+
+```text
+CallPlan.causalActionUseSpec? {
+  causalUseQuestionRef?: U.CausalUseQuestion
+  targetCausalityLadderRung: CausalityLadderRung
+  causalUseClaimKind: CausalUseClaimKind
+  naturalBehaviorPolicyRef?: NaturalBehaviorPolicyRef
+  evaluationPolicyRef?: EvaluationPolicyRef
+  causalEvidenceSupportBasis?: CausalEvidenceSupportBasis
+  causalInterventionSpecRef?
+  counterfactualConditioningRef?
+  counterfactualSamplingRealizabilityProfileRef?
+  causalUseEvidenceDesignRef?
+  offPolicyCausalEvaluationProfileRef?
+  causalUseSupportRecordRef?: CausalUseSupportRecordRef
+  causalUseSupportVerdict?: CausalUseSupportVerdict
+  supportedUse: CausalUseSupportStatement
+  unsupportedUse: CausalUseUnsupportedStatement
+}
+```
+
+The causal action-use tail may be omitted only when the call plan does not reach `CausalUseActivation`: it is not using the call sequence as causal support, not choosing between observation/intervention/counterfactual-policy regimes, and not publishing the result as causal evidence. If the plan says the call will prove, estimate, improve, prevent, or counterfactually establish an outcome, the support tail is present or the wording is downgraded.
+
+What changes in practice: a call plan that probes, intervenes, samples, simulates, or evaluates a policy for a causal purpose must state `CausalUseClaimKind` and the causal regime of the planned action before execution evidence is treated as support for a causal-use claim.
+
+What this does not authorize: `C.24` does not estimate effects, prove identification, certify fairness, or turn simulation output into realized counterfactual-rung evidence; it governs admissible call planning and redirects causal-use support to `C.28`.
+
+
 
 - Planning should reuse the declared source surface, decision lens, probe budget, and stopping posture rather than creating one planning-only choice semantics.
 - Budgeted sequencing may mix exploitation and exploration, but the declared source surface and the declared reason for the next probe must stay recoverable.
@@ -276,6 +309,9 @@ Lexical firewall and notation independence apply; no vendor tokens; mixed-scale 
 10. **CC-ATC-10 - Recoverable enactment closure.** When `C.24` returns one enactment-facing call plan or one `CheckpointReturn`, the `CallPlan` SHALL state current objective, route refs in order, planned budget envelope, stop or replan condition, and next move, while `CheckpointReturn` SHALL state burned/residual actual budget plus next action and commit trigger.
 11. **CC-ATC-11 - Neighboring-pattern reroutes.** If the live question is still fixed-option choice, pool policy over several live lines, or selector-facing publication, `C.24` SHALL reroute to `C.11`, `C.19`, or `G.5` rather than restating those patterns.
 12. **CC-ATC-12 - Role discipline.** User-facing prose and emitted artifacts SHALL speak about systems in agential roles or equivalent typed performers, not one generic `agent` head, when that generic head would blur the holder kind.
+13. **CC-ATC-13 - Causal action-use spec.** If one `CallPlan` selects observation, intervention, counterfactual-rung evidence collection, counterfactual policy conditioning, or off-policy causal evaluation for a causal purpose, it SHALL carry `CallPlan.causalActionUseSpec?` with `targetCausalityLadderRung`, `causalUseClaimKind: CausalUseClaimKind`, supported use, unsupported use, and a `C.28` causal-use support reference rather than letting call-planning vocabulary certify the causal claim.
+
+
 
 ### C.24:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -309,6 +345,7 @@ Lexical firewall and notation independence apply; no vendor tokens; mixed-scale 
 
 - Exit: a speed-up claim names task outcome, evaluation harness, repair-success basis when claimed, cost/budget posture, validity window, stop/replan condition, and unsupported stronger benchmark use; C.24 remains the tool-use pattern.
 
-Builds on: `A.15` Role-Method-Work alignment (planning vs execution vs service), `B.3` Trust & Assurance (`F-G-R/CL`), `C.5 Resrc-CAL`, `C.18 NQD-CAL` (candidate generation and declared set surfaces), and `C.19 E/E-LOG` (policies). Constrains: any `U.PromiseContent` used as a tool MUST expose acceptance conditions and observation hooks sufficient for `B.3` reporting. Enables: human-facing Working-Model surfaces with policy and assurance disclosures while keeping design/run separated.
+Builds on: `A.15` Role-Method-Work alignment (planning vs execution vs service), `B.3` Trust & Assurance (`F-G-R/CL`), `C.5 Resrc-CAL`, `C.18 NQD-CAL` (candidate generation and declared set surfaces), and `C.19 E/E-LOG` (policies). Coordinates with `C.28` when a call plan is used to observe, intervene, collect counterfactual-rung evidence, condition a counterfactual policy, or evaluate a policy for causal-use support. Constrains: any `U.PromiseContent` used as a tool MUST expose acceptance conditions and observation hooks sufficient for `B.3` reporting. Enables: human-facing Working-Model surfaces with policy and assurance disclosures while keeping design/run separated.
 
 ### C.24:End
+

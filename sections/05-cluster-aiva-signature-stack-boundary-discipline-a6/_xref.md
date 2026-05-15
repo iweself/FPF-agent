@@ -1,6 +1,6 @@
 # Cross-References into 05-cluster-aiva-signature-stack-boundary-discipline-a6
 
-Patterns in other Parts that reference patterns in this directory (79 refs).
+Patterns in other Parts that reference patterns in this directory (63 refs).
 
 ## From 04-part-a-kernel-architecture-cluster
 
@@ -16,8 +16,10 @@ Patterns in other Parts that reference patterns in this directory (79 refs).
 
 | Source | Relation | Target |
 |--------|----------|--------|
+| A.10 | coordinates_with | A.6 |
 | A.15.3 | builds_on | A.6.5 |
 | A.15.3 | used_by | A.6.7 |
+| A.15.4 | coordinates_with | A.6 |
 | A.16.2 | coordinates_with | A.6.P |
 | A.19.CHR | builds_on | A.6.7 |
 | A.19.CHR | builds_on | A.6.1 |
@@ -43,6 +45,7 @@ Patterns in other Parts that reference patterns in this directory (79 refs).
 
 | Source | Relation | Target |
 |--------|----------|--------|
+| B.3 | coordinates_with | A.6 |
 | B.4.1 | coordinates_with | A.6.Q |
 | B.4.1 | coordinates_with | A.6.A |
 | B.5.2 | coordinates_with | A.6.P |
@@ -69,39 +72,15 @@ Patterns in other Parts that reference patterns in this directory (79 refs).
 | C.26.1 | builds_on | A.6.B |
 | C.26.1 | coordinates_with | A.6.8 |
 | C.26.3 | builds_on | A.6 |
-
-## From 11-section-ei-the-fpf-constitution
-
-| Source | Relation | Target |
-|--------|----------|--------|
+| C.28 | coordinates_with | A.6 |
 | E.17.1 | builds_on | A.6.2 |
-| E.17.AUD | coordinates_with | A.6.3 |
-| E.17.AUD | coordinates_with | A.6.3.CR |
-| E.17.AUD | coordinates_with | A.6.3.RT |
-| E.17.AUD.LHR | builds_on | A.6.P |
-| E.17.AUD.LHR | coordinates_with | A.6.3 |
-| E.17.AUD.LHR | coordinates_with | A.6.3.CR |
-| E.17.AUD.LHR | coordinates_with | A.6.3.RT |
-| E.17.AUD.OOTD | builds_on | A.6.P |
-| E.17.AUD.OOTD | coordinates_with | A.6.3 |
-| E.17.AUD.OOTD | coordinates_with | A.6.3.CR |
-| E.17.AUD.OOTD | coordinates_with | A.6.3.RT |
-| E.17.EFP | builds_on | A.6.B |
-| E.17.EFP | coordinates_with | A.6.3.CSC |
-| E.17.EFP | coordinates_with | A.6.4 |
-| E.17.ID.CR | coordinates_with | A.6.3 |
-| E.17.ID.CR | coordinates_with | A.6.3.CSC |
-| E.17.ID.CR | coordinates_with | A.6.3.CR |
-| E.17.ID.CR | coordinates_with | A.6.3.RT |
-| E.17.ID.CR | coordinates_with | A.6.4 |
 | E.20 | coordinates_with | A.6.1 |
 | E.20 | coordinates_with | A.6.7 |
 
-## From 13-cluster-fi-context-of-meaning-raw-material
+## From 10-cluster-fi-context-of-meaning-raw-material
 
 | Source | Relation | Target |
 |--------|----------|--------|
-| F.18 | coordinates_with | A.6.P |
 | F.7 | coordinates_with | A.6.9 |
 | F.9 | coordinates_with | A.6.3.CSC |
 | F.9 | coordinates_with | A.6.9 |
@@ -109,7 +88,7 @@ Patterns in other Parts that reference patterns in this directory (79 refs).
 | F.9.1 | coordinates_with | A.6.Q |
 | F.9.1 | coordinates_with | A.6.A |
 
-## From 14-part-g-discipline-sota-patterns-kit
+## From 11-part-g-discipline-sota-patterns-kit
 
 | Source | Relation | Target |
 |--------|----------|--------|

@@ -8,10 +8,10 @@ metadata.
 
 They:
 
-- use lexical-query wording that helps recover one strongest pattern home,
+- use lexical-query wording that helps recover one strongest applicable pattern body,
   entry neighborhood, or strongest projection role under likely reader
   phrasing;
-- remain answerable to the `E.11` rule that one claim names one strongest home
+- remain answerable to the `E.11` rule that one claim names one strongest applicable pattern body
   or strongest projection role and leaves only thin echoes elsewhere;
 - route naming, twins, aliases, and lexical conflicts through `F.17 / F.18 /
   E.10`;
@@ -24,6 +24,6 @@ Ordinary lexical-query support stays sparse:
 - ordinary `J.4` neighborhoods: keep only the strongest domain phrases and
   false friends;
 - fuller lexical sets belong under `F.17 / F.18 / E.10` only when one real
-  naming, alias, bridge, or collision burden exists.
+  naming, alias, bridge, or collision question exists.
 
 Lexical support increases entry precision, not keyword recall volume.

@@ -669,7 +669,7 @@ Useful outputs:
 - one rewritten routed sentence when the case is only a local working note;
 - an ordinary A.6.B routed claim set when no QL burden remains;
 - a C.26.1 route only for the remaining probe-coupled state-reading part;
-- an A.10/B.3/C.16/F.9 route when evidence, assurance, measurement, or bridge work is the real burden.
+- an A.10/B.3/C.16/F.9 route when evidence, assurance, measurement, or bridge work is the real entry load.
 
 Do not write "the boundary is quantum-like" as one unrouted claim. The action is: split the claim, route the pieces, then decide whether `C.26.1` still has a remaining job.
 

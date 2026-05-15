@@ -1,11 +1,12 @@
 # Cross-References into 04-part-a-kernel-architecture-cluster
 
-Patterns in other Parts that reference patterns in this directory (74 refs).
+Patterns in other Parts that reference patterns in this directory (77 refs).
 
 ## From 05-cluster-aiva-signature-stack-boundary-discipline-a6
 
 | Source | Relation | Target |
 |--------|----------|--------|
+| A.6 | coordinates_with | A.21 |
 | A.6.2 | builds_on | A.1 |
 | A.6.3.CSC | coordinates_with | A.21 |
 | A.6.3.RT | coordinates_with | A.21 |
@@ -29,10 +30,15 @@ Patterns in other Parts that reference patterns in this directory (74 refs).
 | Source | Relation | Target |
 |--------|----------|--------|
 | A.10 | builds_on | A.1 |
+| A.10 | coordinates_with | A.21 |
 | A.12 | builds_on | A.3 |
 | A.13 | builds_on | A.2 |
 | A.13 | builds_on | A.2.1 |
 | A.14 | refines | A.1 |
+| A.15.4 | coordinates_with | A.2.1 |
+| A.15.4 | coordinates_with | A.2.8 |
+| A.15.4 | coordinates_with | A.2.9 |
+| A.15.4 | coordinates_with | A.21 |
 | A.19 | builds_on | A.2.5 |
 | A.19 | coordinates_with | A.3.3 |
 | A.19.CHR | coordinates_with | A.21 |
@@ -57,6 +63,7 @@ Patterns in other Parts that reference patterns in this directory (74 refs).
 | B.2.3 | builds_on | A.1 |
 | B.2.4 | builds_on | A.3.1 |
 | B.2.5 | builds_on | A.1 |
+| B.3 | coordinates_with | A.21 |
 | B.4 | builds_on | A.4 |
 | B.4.2 | builds_on | A.1 |
 | B.4.3 | builds_on | A.3.1 |
@@ -75,27 +82,18 @@ Patterns in other Parts that reference patterns in this directory (74 refs).
 | C.25 | builds_on | A.2.6 |
 | C.26.3 | builds_on | A.3 |
 | C.27 | builds_on | A.3.3 |
+| C.28 | coordinates_with | A.2.4 |
+| C.28 | coordinates_with | A.3.2 |
 | C.3 | builds_on | A.1 |
 | C.3 | builds_on | A.2.6 |
 | C.3.1 | builds_on | A.1 |
 | C.3.1 | builds_on | A.2.6 |
 | C.3.3 | builds_on | A.2.6 |
 | C.3.A | builds_on | A.2.6 |
-
-## From 11-section-ei-the-fpf-constitution
-
-| Source | Relation | Target |
-|--------|----------|--------|
-| E.10 | coordinates_with | A.2 |
 | E.10.D1 | builds_on | A.4 |
 | E.16 | builds_on | A.21 |
-| E.17.AUD | coordinates_with | A.21 |
-| E.17.AUD.LHR | coordinates_with | A.21 |
-| E.17.AUD.OOTD | coordinates_with | A.21 |
-| E.17.EFP | coordinates_with | A.21 |
-| E.17.ID.CR | coordinates_with | A.21 |
 
-## From 13-cluster-fi-context-of-meaning-raw-material
+## From 10-cluster-fi-context-of-meaning-raw-material
 
 | Source | Relation | Target |
 |--------|----------|--------|
@@ -104,7 +102,7 @@ Patterns in other Parts that reference patterns in this directory (74 refs).
 | F.4 | builds_on | A.2.1 |
 | F.6 | builds_on | A.2.1 |
 
-## From 14-part-g-discipline-sota-patterns-kit
+## From 11-part-g-discipline-sota-patterns-kit
 
 | Source | Relation | Target |
 |--------|----------|--------|

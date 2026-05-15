@@ -75,6 +75,12 @@ Not a schema—these are **content prompts** for reviewers:
 
 > **Didactic guardrail:** A MethodDescription **does not** embed a schedule, assignees, or BoM. Calendars → `U.WorkPlan`; people/units → `U.RoleAssignment`; product structure → PBS/SBS.
 
+#### A.3.2:4.3a - Causal-use sampling and realized-counterfactual work boundary
+
+A `U.MethodDescription` may specify how to perform intervention assignment, counterfactual randomization, target-trial emulation, realized-counterfactual sampling, simulation, or causal-evidence collection. That specification is still a recipe for action: it declares role requirements, preconditions, postconditions/effects, parameters, failure semantics, and acceptance criteria for the work.
+
+It does not by itself make a causal-use claim admissible. If the resulting work is used to claim effect, intervention success, causal fairness, policy optimality, counterfactual comparison, causal method superiority, or support for a causal decision, route the causal-use question, causality-ladder rung, estimand, support basis, support verdict, supported use, and unsupported use to `C.28`.
+
 #### A.3.2:4.4 - Epistemic roles for MethodDescriptions (via `U.RoleAssignment`)
 
 Being an Episteme, a MethodDescription may itself play epistemic roles via `U.RoleAssignment` in a context (classification, not action), e.g.:
@@ -179,6 +185,9 @@ If a MethodDescription permits non‑determinism (e.g., search/optimization), th
 **CC‑A3.2‑14 (Bridging across contexts).**
 If two contexts use different MethodDescriptions for “the same‑named way,” an explicit **Bridge (`U.Alignment`)** **SHOULD** be provided to map terms/assumptions. Do **not** assume cross‑context identity by name alone.
 
+**CC-A3.2-15 (Causal-use work boundary).**
+A MethodDescription **MAY** describe intervention assignment, target-trial emulation, realized-counterfactual sampling, simulation, or causal-evidence collection as method/work/work-plan structure. It **SHALL NOT** be treated as causal-use support, causal-use admissibility, or causal-use verdict by itself. When that work is used causally, the causal-use question, rung, estimand, support basis, support verdict, supported use, and unsupported use **SHALL** be carried by `C.28`.
+
 
 ### A.3.2:9 - MethodDescription mereology (epistemic composition; not method composition)
 
@@ -269,7 +278,7 @@ Two specs are observationally equivalent for stakeholders **if**, under declared
 ### A.3.2:15 - Relations
 
 * **Builds on:** A.3.1 `U.Method` (the semantic way it describes); A.1.1 `U.BoundedContext`.
-* **Coordinates with:** A.2 `U.Role`, A.2.1 `U.RoleAssignment` (who enacts it); A.2.2 `U.Capability` (ability thresholds); A.15 Role–Method–Work (linking `isExecutionOf` to runs).
+* **Coordinates with:** A.2 `U.Role`, A.2.1 `U.RoleAssignment` (who enacts it); A.2.2 `U.Capability` (ability thresholds); A.15 Role–Method–Work (linking `isExecutionOf` to runs); `C.28` when intervention, target-trial, counterfactual-sampling, simulation, or causal-evidence work is used to support a causal-use claim.
 * **Informs:** `U.WorkPlan` (plans reference MethodDescriptions); `U.Dynamics` (models that specs may assume); Epistemic Role patterns (status of specs RoleStateGraph + State Assertion).
 * **Lexical guards:** E.10.y **L‑PROC** (do not call MethodDescription “process” when you mean Work/WorkPlan); E.10.x **L‑FUNC** (avoid “function/functionality” confusion).
 
@@ -281,5 +290,6 @@ Two specs are observationally equivalent for stakeholders **if**, under declared
 * **Declare parameters & acceptance.** Bind values at Work; state how success is judged.
 * **Same method, different specs.** BPMN/code/solver can be equivalent **if** pre/post/bounds match.
 * **Bridge, do not blur.** Cross‑team/domain differences go through **`U.Alignment`**, not wishful thinking.
-  
+
 ### A.3.2:End
+

@@ -33,9 +33,9 @@ Declared lists of part‑of sub‑relations **scale poorly** and **lack identity
 
 **Compose‑CAL SHALL provide Γₘ with three and only three constructors:**
 1. **`Γₘ.sum(parts:Set[U.Entity])`** — returns a whole *W* such that each *p* in *parts* stands in **KernelPartOf(p, W)**.
-2. **`Γₘ.set(elems:Set[U.Entity])`** — returns a **collection** *C*; each *e* in *elems* stands in a calculus‑internal **mero:KernelPartOf(e, C)** under **member‑as‑part** semantics (publication alias: typically **`ut:MemberOf`**). **Counts/order** (e.g., parallel/serial factors) are **not carried here**; they live in method/time families adjacent to structure.  *Note:* although `mero:KernelPartOf` is transitive in the calculus, the **published** `MemberOf` alias remains **non‑transitive** by design (see A.14 guards). 
+2. **`Γₘ.set(elems:Set[U.Entity])`** — returns a **collection** *C*; each *e* in *elems* stands in a calculus‑internal **mero:KernelPartOf(e, C)** under **member‑as‑part** semantics (publication alias: typically **`ut:MemberOf`**). **Counts/order** (e.g., parallel/serial factors) are **not carried here**; they live in method/time families adjacent to structure.  *Note:* although `mero:KernelPartOf` is transitive in the calculus, the **published** `MemberOf` alias remains **non‑transitive** by design (see A.14 guards).
 3. **`Γₘ.slice(entity:U.Entity, facet:U.Facet)`** — returns an **aspect** *S* such that **mero:KernelPartOf(S, entity)** and *S* carries the declared **facet**. Temporal facets are excluded here.
-   
+
 **Note.** The calculus names an internal backbone **`mero:KernelPartOf`**; the Kernel’s public `ut:PartOf`/**A.14** catalogue remain unchanged. Publish only via Working‑Model aliases (CT2R‑LOG).
 
 The calculus emits a **trace** for every construction; Structural aliases **MUST** be *grounded by* exactly one such trace.
@@ -61,14 +61,14 @@ Use Compose-CAL whenever a claim concerns **structural containment** of entities
 * **Γₘ** — the mereological construction operator of this calculus.
 * **trace** — a minimal, inspectable witness that a constructor was applied to given inputs to yield a whole (or aspect).
 * **structural part‑of** — the structural relation induced by Γₘ; user‑facing aliases (e.g., *ComponentOf*, *MemberOf*) are separate patterns that **must** point back to traces.
-  
- **Alias readiness.** Typical CT2R mappings:  
-* **ComponentOf** ⇢ `sum` narrative;  
-* **MemberOf** ⇢ `set` narrative;  
-* **AspectOf** ⇢ `slice` narrative;  
-* **PortionOf** ⇢ `slice(entity, facet="material/spatial‑region")` **plus** metrical semantics (A.14);  
+
+ **Alias readiness.** Typical CT2R mappings:
+* **ComponentOf** ⇢ `sum` narrative;
+* **MemberOf** ⇢ `set` narrative;
+* **AspectOf** ⇢ `slice` narrative;
+* **PortionOf** ⇢ `slice(entity, facet="material/spatial‑region")` **plus** metrical semantics (A.14);
 * **ConstituentOf** (logical/content) ⇢ `sum` narrative over conceptual parts. *(Material mixtures are **not** `ConstituentOf`; use `PortionOf` or `ComponentOf` per A.14.)*
- 
+
 ### C.13:5 - Archetypal Grounding *(System / Episteme duo)*
 
 > **Tell–Show–Show.** Compose‑CAL is a thinking‑level calculus for building structural wholes from parts. We *show* it twice—first on a **System** (structural) and then on an **Episteme** case (where constructive grounding is *not* the primary mode).
@@ -80,7 +80,7 @@ Use Compose-CAL whenever a claim concerns **structural containment** of entities
 **Constructive grounding (Γ\_m).**
 Narrate a *sum* of parts: “Skid = sum{Pump, Motor, Baseframe, Manifold}.” This uses **`Γ_m.sum`** to obtain a whole whose parts stand in **KernelPartOf**; the resulting Working‑Model relation engineers publish is **`ut:ComponentOf`** on each edge from part to whole. The mapping “*sum → ComponentOf*” reflects the intended aliasing between constructive traces and human‑facing mereology.
 
-**Facets and collections.** 
+**Facets and collections.**
 Need the **inspection surface**? Narrate **`Γₘ.slice(Skid, "spatial")`** and publish **`ut:AspectOf`**. Need a group of **Transfer interactions**? Narrate **`Γₘ.set{…}`** and publish **`ut:MemberOf`**—this is a **collection-as-whole**, not a sub‑assembly; no component identity is implied without a separate **`Γₘ.sum`** narrative.
 
 **Plane separation.**
@@ -90,7 +90,7 @@ Assembly **order** and **time** are *not* encoded here: parallel lines and sched
 
 **Story.** A **Mass‑Flow Representation** is used to stand for a measured flow in a plant dataset.
 
-**Grounding choice.** 
+**Grounding choice.**
 Here the Working‑Model relation (e.g., **RepresentationOf**) is **epistemic**. Authors typically justify it by *inferential* or *postulate* stances (argument or calibration cues), not by a mereological construction; constructive traces remain optional. This preserves the firewall between structure and knowledge claims while keeping a clear path to stronger assurance if the team later reframes part of the representation structurally (e.g., sets of interactions as a **`Γ_m.set`** for a flow bundle).
 
 #### C.13:5.3 - Scope justification
@@ -175,7 +175,7 @@ Correctness‑by‑sequence and temporal coverage are orthogonal to **parthood**
 **Builds on**
 
 * **A.14 Advanced Mereology.** Uses its structural catalogue (Component/Portion/Aspect vs Member) as the *target* of constructive narratives; never collapses Member into Part.
-* **E.5 Guard‑Rails (Notational Independence).** Meanings are given in prose; diagrams are illustrative only.  
+* **E.5 Guard‑Rails (Notational Independence).** Meanings are given in prose; diagrams are illustrative only.
 * **E.5 Guard‑Rails (Unidirectional Dependency).** Compose‑CAL depends **downward** only; it never imports alias layers or higher planes.
 * **E.8 Authoring Conventions.** Conforms to the canonical pattern template (Grounding section for architectural patterns; CC placement).
 

@@ -6,10 +6,10 @@ Auto-generated from metadata.json. Maps core terms to their primary pattern.
 |------|----------------|---------------|
 | evidence | A.2.4 | U.EvidenceRole: The Evidential Stance |
 | edition pins | A.15.3 | SlotFillingsPlanItem — Planned Slot-Fillings Baseline (WorkP |
-| context | A.1.1 | U.BoundedContext: The Semantic Frame |
 | provenance | A.2.9 | U.SpeechAct: Communicative Work Object |
 | composition | A.9 | Cross-Scale Consistency (C-3) |
 | RSCRTriggerKindId | G.0 | CG-Spec — Frame Standard & Comparability Governance |
+| context | A.1.1 | U.BoundedContext: The Semantic Frame |
 | invariants | A.1.1 | U.BoundedContext: The Semantic Frame |
 | scope | A.2.6 | Unified Scope Mechanism (USM): Context Slices & Scopes |
 | measurement | A.6.P | U.RelationalPrecisionRestorationSuite — Relational Precision |
@@ -22,7 +22,6 @@ Auto-generated from metadata.json. Maps core terms to their primary pattern.
 | U.System | A.1 | Holonic Foundation: Entity → Holon |
 | promise content | A.2.3 | U.PromiseContent: Consumer‑facing Promise Clause |
 | lifecycle | A.2.5 | U.RoleStateGraph: The Named State Space of a Role |
-| deontics | A.2.8 | U.Commitment: Deontic Commitment Object |
 | MethodDescription | A.3 | Transformer Constitution (Quartet) |
 | Method | A.3 | Transformer Constitution (Quartet) |
 | Work | A.3 | Transformer Constitution (Quartet) |
@@ -38,7 +37,6 @@ Auto-generated from metadata.json. Maps core terms to their primary pattern.
 | bridge | A.6.9 | U.CrossContextSamenessDisambiguation — Repairing cross-conte |
 | loss notes | A.6.9 | U.CrossContextSamenessDisambiguation — Repairing cross-conte |
 | mereology | A.6.H | Wholeness Language Unpacking (RPR-WHOLE) |
-| audit | A.10 | Evidence Graph Referring (C-4) |
 | P2W seam | A.15.3 | SlotFillingsPlanItem — Planned Slot-Fillings Baseline (WorkP |
 | reopen | A.16 | Language-State Transduction Coordination |
 | characteristic | A.17 | A.CHR-NORM — Canonical “Characteristic” & rename (Dimension/ |
@@ -51,6 +49,8 @@ Auto-generated from metadata.json. Maps core terms to their primary pattern.
 | validation | B.3.2 | Evidence & Validation Logic (LOG-use) |
 | proof | B.3.2 | Evidence & Validation Logic (LOG-use) |
 | grounding | B.3.5 | CT2R-LOG — Working-Model Relations & Grounding |
-| kind | C.3 | Kind‑CAL — Kinds, Intent/Extent, and Typed Reasoning |
 | intension | C.3 | Kind‑CAL — Kinds, Intent/Extent, and Typed Reasoning |
 | agent | C.9 | Agency‑CHR |
+| negotiation | D.3.2 | Conflict Routing Protocol |
+| architecture | E.4 | FPF Artefact Architecture |
+| ReferencePlane | G.0 | CG-Spec — Frame Standard & Comparability Governance |

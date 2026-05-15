@@ -101,6 +101,6 @@ A cleared type enters the kernel **provisionally** with a timer (default = 4 qua
 
 1. **Hard size cap** — should the kernel enforce an absolute limit (e.g., 64 live types) beyond which any new entry forces retirement of an old one?
 2. **Semantic similarity tooling** — can embedding models automate Gate G‑2 overlap detection reliably across domains?
-3. **Gate calibration** — is default Sunset Timer (4 quarters) optimal for research‑oriented patterns with slower uptake?
+3. **Gate calibration** — is default Sunset Timer (4 quarters) optimal for research‑oriented patterns with slower adoption and evidence accumulation?
 
 ### A.11:End

@@ -1,4 +1,4 @@
 by Anatoly Levenchuk and assortment of LLMs.
-April 2026
+May 2026
 
 Pattern and headers templates are explained in pattern E.8.

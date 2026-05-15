@@ -51,7 +51,7 @@ The result: engineers and tool builders can no longer tell **when they are allow
   Effect‑free episteme transforms are attractive precisely because they can be reasoned about algebraically and composed freely. But the more operational power they are given (IO, solver calls, measurements), the less they remain “pure” and the more they belong under `U.Mechanism` / `U.WorkEnactment`.
 
 * **Preserve vs retarget.**
-  Viewing is describedEntity‑preserving; reinterpretation along a KindBridge is describedEntity‑retargenting. Both are important, but **they must be distinguished and witnessed differently**.
+  Viewing is describedEntity‑preserving; reinterpretation along a KindBridge is describedEntity-retargeting. Both are important, but **they must be distinguished and witnessed differently**.
 
 * **Conservativity vs usefulness.**
   EFEM should be **conservative**: no new intensional commitments beyond what input epistemes already entail. At the same time, we need transformations that can *factor*, *aggregate*, or *normalise* content, which may drop some information or change its representation.
@@ -90,7 +90,7 @@ As a `U.Signature`, EFEM publishes the following **SubjectBlock** and the standa
 ```
 SubjectBlock
   SubjectKind   = U.EffectFreeEpistemicMorphing
-  BaseType      = ⟨X : U.Episteme, Y : U.Episteme⟩        // carrier pair (domain,codomain)
+  BaseType      = ⟨X : U.Episteme, Y : U.Episteme⟩        // episteme pair (domain,codomain)
   Quantification= SliceSet:=U.ContextSliceSet; 
   ExtentRule:=admissibleEpistemeMorphisms // Context slices & admissible EFEM per slice
   ResultKind?   = U.Morphism                               // typed morphism f : X→Y
@@ -383,7 +383,7 @@ EFEM does *not* prescribe a specific calculus (deductive, probabilistic, latent�
   A.6.3 and A.6.4 do not need to repeat P0–P5; they specialise EFEM with additional constraints (preserve/retarget). Other patterns (e.g. MultiViewDescribing, MVPK, E.TGA StructuralReinterpretation) can depend on EFEM as a stable base.
 
 * **Slot‑level clarity.**
-  By formulating EFEM laws in terms of SlotKinds/ValueKinds/RefKinds (A.6.5) and the EpistemeSlotGraph (C.2.1), it becomes much harder for Episteme to confuse “object of talk”, “slot in a relation”, and “reference to that object”.
+  By formulating EFEM laws in terms of SlotKinds/ValueKinds/RefKinds (A.6.5) and the EpistemeSlotGraph (C.2.1), it becomes much harder for Episteme to confuse “described entity”, “slot in a relation”, and “reference to that entity”.
 
 * **Better didactics.**
   The old “semantic triangle” becomes a didactic projection of EFEM over the EpistemeSlotGraph: EFEM + C.2.1 explain precisely what the triangle was trying to gesture at (symbol, concept, object), while correctly foregrounding operations, viewpoints, grounding holons, and reference schemes.
@@ -399,7 +399,7 @@ This split mirrors how Signature (A.6.0) separates “what is declared” from �
 
 **Why insist on DescribedEntityChangeMode?**
 
-Because almost all subtle errors in multi‑view reasoning show up as **silent retargeting**: a transform that appears to keep the same object‑of‑talk actually changes it (e.g., from “component assembly” to “function bundle”) without naming the bridge or invariant. By forcing every species to declare `preserve` vs `retarget`, EFEM makes those decisions explicit and reviewable.
+Because almost all subtle errors in multi‑view reasoning show up as **silent retargeting**: a transform that appears to keep the same described entity actually changes it (e.g., from “component assembly” to “function bundle”) without naming the bridge or invariant. By forcing every species to declare `preserve` vs `retarget`, EFEM makes those decisions explicit and reviewable.
 
 **Why attach EFEM to SlotKinds instead of informal “fields”?**
 
@@ -414,7 +414,7 @@ FPF already committed to a single SlotKind/ValueKind/RefKind discipline (A.6.5) 
 * **Specialises / is specialised by.**
 
   * Builds on A.6.0 `U.Signature` and A.6.1 `U.Mechanism` for the uniform SubjectBlock/vocabulary/laws/applicability structure.
-  * Specialised by A.6.3 `U.EpistemicViewing` (describedEntity‑preserving EFEM) and A.6.4 `U.EpistemicRetargeting` (describedEntity‑retargering EFEM).
+  * Specialised by A.6.3 `U.EpistemicViewing` (describedEntity‑preserving EFEM) and A.6.4 `U.EpistemicRetargeting` (describedEntity-retargeting EFEM).
 
 * **Constrained by.**
   A.6.5 `U.RelationSlotDiscipline` (SlotKind/ValueKind/RefKind); C.2.1 `U.EpistemeSlotGraph` (episteme components, ReferencePlane); E.10.D2 (I/D/S discipline); Part F (Bridges, CL, ReferencePlane crossings); E.10 (LEX‑BUNDLE naming rules, especially on `…Slot` / `…Ref` and ban on Subject/Object in episteme tech names).

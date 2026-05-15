@@ -10,7 +10,7 @@
 `B.5 Canonical Reasoning Cycle`, `B.5.1 Exploration`, `B.5.2.0 U.AbductivePrompt`, `A.10`, `B.3.3`.
 
 **Coordinates with.**
-`B.4.1 Observe-Notice-Stabilize-Route` for pre-abductive routing, `A.16` for lawful language-state moves, `A.6.P` for lexical repair before hypothesis publication, and `A.6.Q` / `A.6.A` when the initiating surface is evaluative or action-inviting rather than explanatory.
+`B.4.1 Observe-Notice-Stabilize-Route` for pre-abductive routing, `A.16` for admissible language-state moves, `A.6.P` for lexical repair before hypothesis publication, and `A.6.Q` / `A.6.A` when the initiating publication face or cue is evaluative or action-inviting rather than explanatory.
 
 ### B.5.2:1 - Problem frame
 
@@ -21,7 +21,7 @@ The Canonical Reasoning Cycle begins with abduction: the disciplined proposal of
 Without an explicit abductive pattern:
 
 1. **Inquiry stalls at surprise.**
-   A team encounters an anomaly, opportunity, or probe pressure but has no lawful next move for producing a candidate hypothesis.
+   A team encounters an anomaly, opportunity, or probe pressure but has no admissible next move for producing a candidate hypothesis.
 2. **Origin is lost.**
    Once a conjecture appears, the initiating prompt, rival candidates, and early plausibility grounds disappear from the record.
 3. **Candidate space collapses too early.**
@@ -35,7 +35,7 @@ Without an explicit abductive pattern:
 
 | Force | Tension |
 |---|---|
-| **Generativity vs discipline** | The loop must admit non-deductive candidate generation without making arbitrary guesses look lawful. |
+| **Generativity vs discipline** | The loop must admit non-deductive candidate generation without making arbitrary guesses look admissible. |
 | **Breadth vs typed entry** | Abduction should begin from more than anomaly alone, but not from any untyped prose fragment. |
 | **Rival diversity vs decision pressure** | Several candidates should remain visible long enough to compare them, while still allowing one prime hypothesis to progress. |
 | **Speed vs traceability** | The loop must be light enough for repeated use but explicit enough to preserve provenance and later review. |
@@ -43,7 +43,7 @@ Without an explicit abductive pattern:
 
 ### B.5.2:4 - Solution - Structured abductive micro-cycle
 
-`B.5.2` defines abduction as a typed, iterative micro-cycle that begins from a lawful `U.AbductivePrompt`, expands a candidate set, filters that set by explicit plausibility criteria, and publishes one selected conjecture as a new `U.Episteme` with `AssuranceLevel:L0`.
+`B.5.2` defines abduction as a typed, iterative micro-cycle that begins from an admissible `U.AbductivePrompt`, expands a candidate set, filters that set by explicit plausibility criteria, and publishes one selected conjecture as a new `U.Episteme` with `AssuranceLevel:L0`.
 
 #### B.5.2:4.1 - Nature of abduction in FPF
 
@@ -62,7 +62,7 @@ The loop is intentionally iterable. A selected prime hypothesis may later be rep
 
 #### B.5.2:4.3 - Entry discipline via `U.AbductivePrompt`
 
-`AnomalyStatement` remains a canonical entry surface, but it is not the only one. `B.5.2` also accepts the broader prompt species owned by `B.5.2.0`, such as `ProblemCuePrompt`, `OpportunityCuePrompt`, and `ProbeCuePrompt`. This broadens entry without dissolving type discipline.
+`AnomalyStatement` remains a canonical prompt species, but it is not the only one. `B.5.2` also accepts the broader prompt species governed by `B.5.2.0`, such as `ProblemCuePrompt`, `OpportunityCuePrompt`, and `ProbeCuePrompt`. This broadens entry without dissolving type discipline.
 
 #### B.5.2:4.4 - Plausibility filters
 
@@ -90,7 +90,7 @@ This pattern biases authors toward visible candidate plurality, explicit plausib
 
 ### B.5.2:7 - Conformance Checklist
 
-- `CC-B.5.2-1` Every abductive run **SHALL** begin from a declared `U.AbductivePrompt`; arbitrary prose fragments are not sufficient entry surfaces.
+- `CC-B.5.2-1` Every abductive run **SHALL** begin from a declared `U.AbductivePrompt`; arbitrary prose fragments are not sufficient prompt-entry forms.
 - `CC-B.5.2-2` A conforming abductive run **SHALL** record at least one rival candidate alongside any selected prime hypothesis, unless the author explicitly justifies why no rival candidate was available.
 - `CC-B.5.2-3` Selection of a prime hypothesis **SHALL** cite at least two explicit plausibility filters.
 - `CC-B.5.2-4` The selected prime hypothesis **SHALL** be published as a new `U.Episteme` with `AssuranceLevel:L0`.
@@ -102,7 +102,7 @@ This pattern biases authors toward visible candidate plurality, explicit plausib
 | Anti-pattern | What it looks like | How FPF prevents it |
 |---|---|---|
 | **Authority candidate** | One favored conjecture is advanced immediately, with no rival set and no explicit filtering. | `CC-B.5.2-2` and `CC-B.5.2-3` require candidate plurality and visible plausibility grounds. |
-| **Untestable grand conjecture** | The candidate sounds deep or comprehensive, but it creates no lawful next step for checking, probing, or deduction. | `CC-B.5.2-6` rejects prime hypotheses that cannot open a downstream path. |
+| **Untestable grand conjecture** | The candidate sounds deep or comprehensive, but it creates no admissible next step for checking, probing, or deduction. | `CC-B.5.2-6` rejects prime hypotheses that cannot open a downstream path. |
 | **Prompt amnesia** | A later reader can see the conjecture but not the initiating anomaly, opportunity, or probe pressure. | `CC-B.5.2-1` and `CC-B.5.2-5` keep prompt provenance attached. |
 | **Symptom patching** | The selected candidate only redescribes a visible symptom and leaves the actual prompt unresolved. | The explicit plausibility filter for explanatory reach forces the candidate to be compared against the whole prompt. |
 
@@ -111,13 +111,13 @@ This pattern biases authors toward visible candidate plurality, explicit plausib
 | Benefit | Trade-off / Mitigation |
 |---|---|
 | **Disciplined generativity.** Abduction stays inventive without collapsing into formless conjecturing. | Requires explicit prompt and filter publication; mitigation: the required record can remain lightweight. |
-| **Traceable hypothesis origin.** Later review can reconstruct why a conjecture entered the reasoning cycle. | Adds a small provenance burden; mitigation: reuse prompt and candidate-set notes from adjacent patterns. |
-| **Cleaner downstream handoff.** Deduction and evidence work begin from an `L0` artifact with explicit scope and rationale. | Some early conjectures will be rejected sooner; that is a feature, not a defect. |
-| **Lawful reopening.** Rival candidates can be revisited when later work weakens the selected prime hypothesis. | Demands editorial discipline so that abandoned rivals remain legible rather than silently vanishing. |
+| **Traceable hypothesis origin.** Later review can reconstruct why a conjecture entered the reasoning cycle. | Adds a small provenance-support load; mitigation: reuse prompt and candidate-set notes from adjacent patterns. |
+| **Cleaner downstream handoff.** Deduction and evidence work begin from an `AssuranceLevel:L0` `U.Episteme` publication with explicit scope and rationale. | Some early conjectures will be rejected sooner; that is a feature, not a defect. |
+| **Admissible reopening.** Rival candidates can be revisited when later work weakens the selected prime hypothesis. | Demands editorial discipline so that abandoned rivals remain legible rather than silently vanishing. |
 
 ### B.5.2:10 - Rationale
 
-The Canonical Reasoning Cycle needs a disciplined beginning that is neither over-formalized nor mystical. `B.5.2` supplies that beginning. It keeps hypothesis generation explicit, connects it to typed entry surfaces, and prepares the output for later assurance work without pretending that early plausibility is already evidence.
+The Canonical Reasoning Cycle needs a disciplined beginning that is neither over-formalized nor mystical. `B.5.2` supplies that beginning. It keeps hypothesis generation explicit, connects it to typed prompt publications, and prepares the output for later assurance work without pretending that early plausibility is already evidence.
 
 ### B.5.2:11 - SoTA-Echoing
 
@@ -127,13 +127,13 @@ Contemporary inquiry practice in science, engineering, design, and diagnosis tre
 
 - **Is the first reasoning phase within:** `B.5 Canonical Reasoning Cycle`.
 - **Typically operates during:** `B.5.1 Exploration`.
-- **Consumes:** `U.AbductivePrompt` surfaces from `B.5.2.0`, often reached through `B.4.1` and `A.16`.
-- **Produces:** hypothesis-bearing `U.Episteme` artifacts at `AssuranceLevel:L0`.
+- **Consumes:** `U.AbductivePrompt` publications from `B.5.2.0`, often reached through `B.4.1` and `A.16`.
+- **Produces:** hypothesis-bearing `U.Episteme` publications at `AssuranceLevel:L0`.
 - **Feeds:** downstream deduction, probe design, and evidence acquisition in the later reasoning cycle.
 
-#### B.5.2:12.1 - Entry-surface broadening via `U.AbductivePrompt`
+#### B.5.2:12.1 - Prompt-entry broadening via `U.AbductivePrompt`
 
-Older wording that makes `AnomalyStatement` the exclusive entry surface is superseded. `B.5.2` accepts `U.AbductivePrompt`, where `AnomalyStatement` remains one canonical species alongside cue-derived prompt species such as `ProblemCuePrompt`, `OpportunityCuePrompt`, and `ProbeCuePrompt`.
+Older wording that makes `AnomalyStatement` the exclusive entry form is superseded. `B.5.2` accepts `U.AbductivePrompt`, where `AnomalyStatement` remains one canonical species alongside cue-derived prompt species such as `ProblemCuePrompt`, `OpportunityCuePrompt`, and `ProbeCuePrompt`.
 
 
 ### B.5.2:13 - Prompt, Candidate, and Hypothesis Package Discipline
@@ -172,12 +172,12 @@ A selected prime hypothesis should preserve more than the hypothesis sentence it
 - the **prompt** it answers,
 - the **filters** under which it outranked rivals,
 - the **scope** within which it is being advanced,
-- the **next lawful downstream move** (deduction, probe design, targeted evidence acquisition, or explicit reopening criteria),
+- the **next admissible downstream move** (deduction, probe design, targeted evidence acquisition, or explicit reopening criteria),
 - and any **known fragilities** already visible at selection time.
 
 This is how `B.5.2` stays connected to the rest of the reasoning cycle. The abductive loop does not merely emit an idea; it emits a conjecture with an explicit handoff contract.
 
-### B.5.2:14 - Lawful Transitions, Abort Paths, and Reopening
+### B.5.2:14 - Admissible Transitions, Abort Paths, and Reopening
 
 The abductive loop is iterative, but it is not formless. Several transition cases need explicit handling so that later stages know whether they are receiving a stable `L0` conjecture, a deferred candidate, or a prompt that should be reopened rather than forced forward.
 
@@ -190,7 +190,7 @@ The abductive loop is iterative, but it is not formless. Several transition case
 
 #### B.5.2:14.2 - Abort, defer, and split cases
 
-Not every abductive run should end in a prime hypothesis. Three non-selection outcomes are lawful:
+Not every abductive run should end in a prime hypothesis. Three non-selection outcomes are admissible:
 
 1. **Abort.** The prompt dissolves because the initiating anomaly or opportunity was misread, duplicated, or already answered elsewhere.
 2. **Defer.** Several candidates remain live, but the discriminating evidence or probe is not yet available. The loop pauses without pretending a winner exists.
@@ -237,7 +237,7 @@ Candidate hypotheses include:
 
 - the effect is caused by surface geometry,
 - it is caused by composition gradients,
-- or it is an artefact of one measurement regime.
+- or it is an effect of one measurement regime.
 
 The selected prime hypothesis is the geometry explanation because it has stronger explanatory reach across the initial observations and yields a cleaner discriminating experiment. The loop shows why opportunity-driven abduction still needs rival tracking; without it, attractive novelty language would substitute for hypothesis discipline.
 
@@ -270,7 +270,7 @@ If those answers cannot be given, the publication is probably not yet at `B.5.2`
 
 Reviewers should not ask only whether the chosen hypothesis looks plausible. They should also ask:
 
-- whether the prompt was typed lawfully,
+- whether the prompt was typed in an admissible way,
 - whether at least one real rival was preserved,
 - whether the filters named at selection time actually discriminate among candidates,
 - whether the selected hypothesis has a credible downstream path,
@@ -286,7 +286,7 @@ Integrators should remember that `L0` is still early assurance. `B.5.2` supplies
 
 #### B.5.2:17.1 - Migration from anomaly monopoly
 
-Older wording that says abduction begins only from anomaly should be rewritten into the broader but still typed claim: abduction begins from a lawful `U.AbductivePrompt`, of which anomaly is one canonical species.
+Older wording that says abduction begins only from anomaly should be rewritten into the broader but still typed claim: abduction begins from an admissible `U.AbductivePrompt`, of which anomaly is one canonical species.
 
 #### B.5.2:17.2 - Migration from inspiration rhetoric
 

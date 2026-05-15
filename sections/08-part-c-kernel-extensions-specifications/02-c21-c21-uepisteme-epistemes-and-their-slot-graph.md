@@ -242,7 +242,9 @@ This section defines the **minimal node set** for `U.EpistemeSlotGraph` and the 
 **Intent.** Distinguish **view‑epistemes** (views **of** descriptions/specifications) from both:
 
 * the underlying descriptions/specifications themselves, and
-* the **PublicationSurface** carriers on which they are rendered (E.17, L‑SURF).
+* the MVPK `PublicationSurface`/`InteropSurface` `SurfaceKind` values and the external carriers/renderings on which views are made available (E.17, L-SURF, SCR/RSCR).
+
+
 
 **Normative definition.**
 
@@ -258,7 +260,9 @@ This section defines the **minimal node set** for `U.EpistemeSlotGraph` and the 
    * **ValueKind** is `U.View`,
    * **RefKind** is `U.ViewRef` (or `U.EpistemeViewRef` species),
    * intended usage is **in meta‑structures** such as `U.MultiViewDescribing` families and MVPK.
-4. `ViewSlot` **MUST NOT** be confused with carrier slots: Surfaces and faces are **not** values of `ViewSlot`; they are `U.Surface` artefacts in L‑SURF, related to views by MVPK.
+4. `ViewSlot` **MUST NOT** be confused with publication-face labels, `SurfaceKind` declarations, or carrier slots: a concrete MVPK face that is a view is represented as `U.View` / `U.EpistemeView`, while the face label/profile, `PublicationSurface`/`InteropSurface` kind, and carrier/rendering remain separate lanes.
+
+
 
 **Didactic cue.**
 “Ask: *Which particular slice of the description under this viewpoint are we talking about?* That is the View.”
@@ -394,8 +398,12 @@ To prevent confusion between **objects‑of‑talk**, their **descriptions**, an
 2. **`U.EpistemePublication`.**
    A species representing **epistemes that have been published** onto surfaces (MVPK). It:
    * has at least the components of `U.EpistemeCard`,
-   * plus references to `U.Surface` / `U.Face` artefacts (E.17, L‑SURF),
-   * but **does not** re‑interpret these surfaces as parts of the episteme; carriers remain external.
+   * plus references to MVPK `U.View` / face identity, `PublicationSurface`/`InteropSurface` `SurfaceKind`, publication-scope/profile fields, and external carrier/rendering refs as required by E.17 and L-SURF,
+
+
+   * but **does not** re-interpret face labels, `SurfaceKind` values, or carriers/renderings as parts of the episteme; carriers remain external.
+
+
 3. **`U.EpistemeView`.**
    As defined in §4.1.5, a species of `U.Episteme` representing a **view** under a specific `U.Viewpoint`.
    Its components are a specialisation of `U.EpistemeCard`:
@@ -412,7 +420,23 @@ This ensures that A.6.2–A.6.4 can treat any `U.Episteme*` uniformly as both:
 * an object in the category **Ep**, and
 * a structured holon with components.
 
+##### C.2.1:4.2.3a - Episteme, publication, view, carrier, cue, and authority-reference lanes  *(normative)*
+
+C.2.1 is the default FPF pattern for claim-bearing units. Do not mint a generic `U.SemioObject`, `U.SemioticObject`, `U.SignObject`, `U.WorkingObject`, or `U.SourceMaterial` when the object in question is a claim-bearing unit. Use `U.Episteme` or a declared species of `U.Episteme`.
+
+When the same claim-bearing unit is available to readers, tools, or downstream work as a published episteme, name that lane as `U.EpistemePublication` or as a governed `U.Episteme` publication. Then keep the adjacent lanes separate:
+
+* **publication form** — the concrete form in which the episteme is made available for some use, such as a cue pack, routed claim set, prompt form, partial normal form, record, card, table, or profile;
+* **view / MVPK face** — `U.View` / `U.EpistemeView` under a declared `U.Viewpoint`, including MVPK faces such as `PlainView`, `TechCard`, `InteropCard`, or `AssuranceLane`;
+* **carrier or rendering** — the SCR/RSCR, document, dashboard, generated screen, trace file, transport envelope, or display that bears or renders a publication;
+* **source-finding cue** — a badge, tile, heading, signature-looking mark, credential display, generated explanation, or other cue that helps find a source but does not by itself create source authority;
+* **governing-pattern / authority-source reference** — `governingPatternRef` when one FPF pattern governs admissible interpretation or use; `authoritySourceRef` when a non-pattern authority source such as an external standard, editioned register, DRR, gate decision, policy source, or role/status register carries the relevant authority. The publication records this reference; it does not become the referenced authority.
+
+No publication form, view, face, carrier, rendering, source-finding cue, dashboard signal, credential display, generated explanation, or pattern file/section is itself a substitute for a governed `U.Episteme`, an evidence relation, an assurance claim, a gate decision, a permission, a role/status claim, or a `U.Work` occurrence. If the next move concerns work, keep candidate reliance, `U.WorkPlanning`, planned work, actual `U.Work`, work result, and work-result measurement in their own P2W lanes rather than storing them inside the episteme or its carrier.
+
 ##### C.2.1:4.2.4 - SlotKind / ValueKind / RefKind discipline for DescribedEntity & GroundingHolon
+
+
 
 C.2.1 adopts **A.6.5 `U.RelationSlotDiscipline`** wholesale. For the two key positions:
 1. **DescribedEntitySlot.**
@@ -731,7 +755,12 @@ Any pattern in A.6.2–A.6.4, E.17, E.TGA, or discipline packs that defines morp
 * name which SlotKinds it reads and writes,
 * state its behaviour on `describedEntityRef`, `groundingHolonRef`, `viewpointRef`, and `referenceScheme`.
 
+**CC-C.2.1-5a - Episteme/publication lane split for semio-facing terms.**
+Any pattern, profile, support note, or FPF-facing term that talks about signs, explanation, publication, source cues, authority-looking cases, or reader reliance **MUST** name the claim-bearing object as `U.Episteme`, `U.EpistemePublication`, or a declared species of `U.Episteme`. When publication is live, it **MUST** separately name the publication form, `U.View`/MVPK face, carrier/rendering, source-finding cue, and either `governingPatternRef` or `authoritySourceRef` when interpretation or use depends on a named authority reference. It **MUST NOT** use `semio object`, `semiotic object`, `source material`, `working object`, `governing host`, or `pattern home` as solution terms.
+
 **CC‑C.2.1‑6 - Semantic‑triangle usage guard.**
+
+
 If a semantic triangle or parallelogram diagram appears in a pattern or tutorial, there must be an explicit note that:
 * it is a didactic projection of `U.EpistemeSlotGraph`, and
 * normative laws are stated in terms of C.2.1 nodes and morphisms, not in terms of triangle corners.

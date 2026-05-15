@@ -49,7 +49,7 @@ Model the claim as evidence-bound `U.Episteme` over a declared collective `U.Sys
 
 If the bearer is a market slice or service mesh, declare whether it is a collective `U.System`, delivery system, trace population, or evidence set. Do not infer systemhood from coordinated-looking traces alone.
 
-The primary evidence family is coordinated work, service behavior, market participant traces, distributed cognition, routine dynamics, team cognition, work traces, and socio-technical evidence. QL enters only when probe, frame, export, incompatible read, or carrier/export structure that is not faithful enough for the declared use changes the lawful state reading.
+The primary evidence family is coordinated work, service behavior, market participant traces, distributed cognition, routine dynamics, team cognition, work traces, and socio-technical evidence. QL enters only when probe, frame, export, incompatible read, or carrier/export structure that is not faithful enough for the declared use changes the admissible state reading.
 
 The canonical EDSE move is to separate the factorable part from the coordination residue before making the weak state reading:
 
@@ -66,7 +66,7 @@ Start with this recognition note:
 | Carriers / window | Which traces, artifacts, work results, commitments, dashboards, API responses, or records ground the reading, and during which window? |
 | Weak state reading | What is the weakest state reading supported by the coordinated work/behavior or trace pattern? |
 | Rival | Which ordinary rival explanation remains live: policy, routine, shared stimulus, dashboard-following, copied artifact, or propagation effect? |
-| Practical change | What can be done now without exceeding the evidence: adjust communication, triage, routing, planning, probe design, or return to a stronger source? |
+| Practical change | What can be done now without exceeding the evidence: adjust communication, triage, routing, planning, probe design, or return to a fuller evidence record? |
 
 Use the fuller EDSE record below when the reading will change coordination, be reused, be contested, support evidence, or leave the immediate local discussion.
 

@@ -58,7 +58,7 @@ The Canonical Evolution Loop is universal. It applies identically to the evoluti
         1.  **Operate:** The drones perform deliveries.
         2.  **Observe:** A monitoring service (`Transformer`) and operators notice recurring cold-weather battery strain, but the evidence is still weakly articulated.
         3.  **Stabilize:** The team publishes a `U.PreArticulationCuePack` that preserves the cue nucleus, the primary witness traces, and the current language-state position without pretending that a final anomaly or action record already exists.
-        4.  **Route:** The team publishes a `RoutedCueSet` that keeps multiple lawful continuations visible (for example, battery-chemistry investigation versus route-planning adjustment) so that later owners can take over without losing the early signal.
+        4.  **Route:** The team publishes a `RoutedCueSet` that keeps multiple admissible continuations visible (for example, battery-chemistry investigation versus route-planning adjustment) so that later endpoint governing patterns can take over without losing the early signal.
 
 *   **B.4.2 - Knowledge Instantiation (Theory Refinement Loop):**
     *   **Context:** A scientific theory of protein folding (`U.Episteme`) is being used to predict structures.

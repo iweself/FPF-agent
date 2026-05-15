@@ -8,7 +8,7 @@
 
 
 ### C.2.4:1 - Problem frame
-A governed `U.Episteme` can already matter while its semantic shape is not yet fully explicit. The declared language-state chart over `U.CharacteristicSpace` therefore needs one basis-slot owner for how explicit that shape already is, without confusing articulation with rigor, truth, or closure.
+A governed `U.Episteme` can already matter while its semantic shape is not yet fully explicit. The declared language-state chart over `U.CharacteristicSpace` therefore needs one basis-slot governing pattern for how explicit that shape already is, without confusing articulation with rigor, truth, or closure.
 
 ### C.2.4:2 - Problem
 When articulation explicitness stays implicit, authors either overstate readiness for later repair or endpoint routing, or hide early cue structure entirely. Reusing `F` for this judgement creates a category error: formality is about rigor of expression, not about whether the semantic shape is already explicit enough for repair or endpoint routing.
@@ -23,7 +23,7 @@ When articulation explicitness stays implicit, authors either overstate readines
 ### C.2.4:4 - Solution
 `U.ArticulationExplicitness` is an ordinal characteristic over how explicit the semantic shape is in a published position claim in the declared language-state chart over `U.CharacteristicSpace`, for publication, routing, and repair.
 
-#### C.2.4:4.1 - Characteristic contract
+#### C.2.4:4.1 - Characteristic specification
 - **Kind:** CHR characteristic.
 - **Scale discipline:** ordinal.
 - **What rises:** semantic shape becomes more explicit.
@@ -32,14 +32,14 @@ When articulation explicitness stays implicit, authors either overstate readines
 `AE` is therefore independent from `F`, from `LanguageStateClosureDegree`, and from endpoint authority.
 
 #### C.2.4:4.2 - Starter anchor set
-| Anchor | Reading | Typical lawful publication state |
+| Anchor | Reading | Typical admissible publication state |
 |---|---|---|
 | `AE0` | felt / latent / weak cue only | still preservable, but not yet anchor-explicit |
 | `AE1` | stable cue span, contrast, or disturbance cue is nameable | `U.PreArticulationCuePack` becomes natural |
 | `AE2` | candidate anchors or partial roles are visible | cue pack with candidate anchors and route candidates |
 | `AE3` | minimally relation-like skeleton exists | entry to `A.6.P` becomes possible if local threshold allows |
 | `AE4` | slot-explicit normal form is publishable | explicit relation or characteristic form |
-| `AE5` | articulation is explicit enough for stable endpoint routing and later bridge work | endpoint-owned publication becomes straightforward |
+| `AE5` | articulation is explicit enough for stable endpoint routing and later bridge work | endpoint-pattern-governed publication becomes straightforward |
 
 The anchors are a starter set; a Context may refine them locally, but it shall keep the ordinal direction and the distinction from `F` intact.
 
@@ -50,12 +50,12 @@ The anchors are a starter set; a Context may refine them locally, but it shall k
 - High `F` shall not be taken to imply high `AE`, and high `AE` shall not be taken to imply high `F`.
 
 #### C.2.4:4.4 - Change discipline
-Raising `AE` requires additional explicit anchors, slots, or normal-form structure. Lowering `AE` is lawful under `A.16.2` when a prior articulation proves over-committed or misleading.
+Raising `AE` requires additional explicit anchors, slots, or normal-form structure. Lowering `AE` is admissible under `A.16.2` when a prior articulation proves over-committed or misleading.
 
 ### C.2.4:5 - Archetypal Grounding
-**Tell.** "Something is off" may be a real cue even before bearer, action, or evaluator are explicit.
+**Tell.** "Something is off" may be a real cue even before role bearer, intended work/reliance move, or evaluator are explicit.
 
-**Show (System).** An operator alert cue grounded in a disturbance trace may be stabilized as a candidate intervention cue before a full action contract exists.
+**Show (System).** An operator alert cue grounded in a disturbance trace may be stabilized as a candidate intervention cue before a full work/reliance relation specification exists.
 
 **Show (Episteme).** A research note may name a contrast and exemplars before it has a clean proposition.
 
@@ -74,7 +74,7 @@ The pattern legitimizes early cues. The counter-bias is explicit: low `AE` never
 - **Ready-by-tone.** A sentence sounds precise, so authors assume `AE3+`. Publish the actual anchors.
 
 ### C.2.4:9 - Consequences
-The benefit is lawful publication of early cues and clearer threshold setting for repair. The trade-off is that authors must distinguish "not yet explicit" from "already formal".
+The benefit is admissible publication of early cues and clearer threshold setting for repair. The trade-off is that authors must distinguish "not yet explicit" from "already formal".
 
 ### C.2.4:10 - Rationale
 `AE` is one basis slot in the declared language-state chart over `U.CharacteristicSpace`. Without it, `A.16.0`, `A.16.1`, and `B.4.1` cannot state crisp entry, seam, and exit conditions.
@@ -89,7 +89,7 @@ The distinction echoes work on sketching, focusing/TAE, embodied cue capture, an
 ### C.2.4:13 - Worked Examples and Edge Cases
 
 #### C.2.4:13.1 - High formality, low articulation
-A template may be syntactically precise and therefore high in `F`, yet still low in `AE` because the actual bearer, relation, or action slots remain unclear. This is the classic case where formal-looking language overstates semantic readiness.
+A template may be syntactically precise and therefore high in `F`, yet still low in `AE` because the actual role-bearer, relation, or intended-work-or-reliance-move slots remain unclear. This is the classic case where formal-looking language overstates semantic readiness.
 
 #### C.2.4:13.2 - Low formality, high articulation
 A short, plain note may be low in `F` yet already high in `AE` because the relation skeleton is explicit enough for `A.6.P`. This case matters because it shows that `AE` is not a stylistic measure.
@@ -122,7 +122,7 @@ Contexts may refine the starter anchor set with subanchors, but the refinement m
 Statements such as "still vague", "more explicit now", or "ready for formalization" should be migrated into explicit `AE` claims plus the corresponding move or routing claim.
 
 #### C.2.4:15.3 - Boundary reminder
-`AE` does not own closure, confidence, or warrant. If authors want those meanings, they must publish them through their own owners.
+`AE` does not govern closure, confidence, or warrant. If authors want those meanings, they must publish them through their own governing patterns.
 ### C.2.4:16 - Articulation Publication Package Discipline
 
 #### C.2.4:16.1 - Minimal articulation package
@@ -130,9 +130,9 @@ An `AE` claim that matters for routing or repair should normally publish more th
 
 - stable trigger span;
 - candidate anchors or contrasts;
-- bearer/action/evaluator slots where relevant;
+- role-bearer / intended-work-or-reliance-move / evaluator slots where relevant;
 - a minimally relation-like skeleton;
-- a candidate normal form, or an explicit note that no such form is yet lawful.
+- a candidate normal form, or an explicit note that no such form is yet admissible.
 
 A bare `AE3` label is weak publication when the supporting articulation evidence is absent.
 
@@ -144,8 +144,8 @@ If entry from `A.16.1` or `B.4.1` into `A.6.P` depends on `AE`, publish the thre
 
 ### C.2.4:17 - Threshold Crossing and Split Handling
 
-#### C.2.4:17.1 - Lawful entry into relational repair
-Entry into `A.6.P` is lawful when the local articulation threshold is met and the note already exposes enough relation structure for precision restoration to operate on a real relation-like episteme. Entry into `B.5.2.0` is lawful when the open question is explicit enough for prompt-species publication even if relation structure is still too thin for `A.6.P`. If the threshold is borderline, keep the episteme in `B.4.1` or `A.16.1` and state what anchor or slot is still missing.
+#### C.2.4:17.1 - Admissible entry into relational repair
+Entry into `A.6.P` is admissible when the local articulation threshold is met and the note already exposes enough relation structure for precision restoration to operate on a real relation-like episteme. Entry into `B.5.2.0` is admissible when the open question is explicit enough for prompt-species publication even if relation structure is still too thin for `A.6.P`. If the threshold is borderline, keep the episteme in `B.4.1` or `A.16.1` and state what anchor or slot is still missing.
 
 #### C.2.4:17.2 - High-articulation, low-closure cases
 A note may reach `AE4+` while remaining low or mid in `CD`. In such cases state that articulation is sufficient for precise handling while closure still leaves rival routes or frames live.
@@ -160,11 +160,11 @@ A reviewer should ask:
 
 - are the named anchors genuinely present rather than merely presupposed;
 - does the claimed articulation level rest on structure rather than tone;
-- are bearer, action, evaluator, or comparison slots still ghosted;
-- if `AE` is used to justify route transfer, is the destination owner actually ready to receive the publication.
+- are role-bearer, intended-work-or-reliance-move, evaluator, or comparison slots still ghosted;
+- if `AE` is used to justify route transfer, is the destination governing pattern actually ready to receive the publication.
 
 #### C.2.4:18.2 - Endpoint-boundary test
-High `AE` does not by itself authorize endpoint claims, gate pressure, or quality ascriptions. If such consequences appear, show which downstream owner takes over.
+High `AE` does not by itself authorize endpoint claims, gate pressure, or quality ascriptions. If such consequences appear, show which downstream governing pattern takes over.
 
 #### C.2.4:18.3 - Migration note for false precision
 Rigid templates, capitalized labels, or tidy sentence rhythm can simulate articulation. Migration should therefore test whether anchors and slots are really present; if not, the articulation level should drop.
