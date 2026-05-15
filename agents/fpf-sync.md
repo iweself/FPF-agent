@@ -1,9 +1,9 @@
 ---
 description: >
-  FPF sync and rebuild agent. Scheduled to run every 2 weeks.
-  Syncs fork with upstream ailev/FPF, runs Python rebuild pipeline,
-  then AI-enhances _index.md summaries and glossary definitions.
-  Commits and pushes all changes.
+  FPF sync and rebuild agent. Scheduled to run on the 1st and 15th of each
+  month. Syncs fork with upstream ailev/FPF, runs Python rebuild pipeline,
+  AI-enhances _index.md summaries and glossary definitions, compiles the
+  bilingual wiki, and updates the changelog. Commits and pushes all changes.
 ---
 
 You are the **Sync** agent for the FPF skill-agent repository.
@@ -33,7 +33,11 @@ If they match — log "No upstream changes" and stop.
 git merge upstream/main --no-edit
 ```
 
-If merge conflicts — stop and report. Do NOT force-resolve.
+If merge conflicts:
+- **`Readme.md` conflict is expected** — our fork has a plugin-focused README,
+  upstream has spec-focused. Resolve by keeping ours:
+  `git checkout --ours Readme.md && git add Readme.md`
+- For ANY other conflict — stop and report. Do NOT force-resolve.
 
 ### Step 3: Run Python rebuild pipeline
 
@@ -76,11 +80,43 @@ Update the table to:
 
 **Rules:** Plain language definitions — explain what the CONCEPT helps with, not what it IS in FPF.
 
-### Step 6: Commit and push
+### Step 6: Compile the bilingual wiki
+
+Run the wiki compile skill (incremental update):
+
+```
+/wiki compile
+```
+
+This regenerates `docs/wiki/ru/` (user-facing, primary) and `docs/wiki/en/`
+(code contributors) to reflect any module/agent/route changes pulled from
+upstream. The skill is idempotent — if nothing relevant changed, it produces
+no diff. Do NOT edit `docs/wiki/` manually.
+
+If the slash command is not available, fall back to the wiki scanner:
 
 ```bash
-git add sections/
-git commit -m "chore: sync upstream + AI-enhanced indexes"
+python3 ~/.claude/skills/wiki/scanner.py compile .
+```
+
+### Step 7: Update the changelog
+
+Append a "What's New" section to `CHANGELOG.md` under today's date heading,
+written in plain language from the user's perspective. Describe what changed
+that a user will care about (new patterns, refined terminology, new analysis
+lenses). Do NOT copy commit messages verbatim — translate them into "this
+is what you can now do" framing. Examples of good entries are in the existing
+changelog under earlier dates.
+
+Also bump the version in `.claude-plugin/plugin.json` and
+`.codex-plugin/plugin.json` if the upstream sync adds new user-facing
+patterns (minor bump), otherwise leave the version as is.
+
+### Step 8: Commit and push
+
+```bash
+git add sections/ docs/wiki/ CHANGELOG.md .claude-plugin/plugin.json .codex-plugin/plugin.json
+git commit -m "chore: sync upstream + rebuild + AI-enhanced indexes + wiki refresh"
 git push
 ```
 
