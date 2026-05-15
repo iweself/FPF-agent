@@ -74,15 +74,13 @@ Pipeline depth is adaptive: simple term lookups use Retriever → Reasoner (~800
 
 ## Sync & Rebuild
 
-Two-layer automatic update:
+**Claude Code Remote Routine** (`trig_01P7UzjrjgsgzLpMHn84bMoo`):
+- Cron: 1st and 15th of each month, 07:00 UTC (= 09:00 Europe/Belgrade)
+- Pipeline: syncs upstream → `bash scripts/rebuild_all.sh` → AI-enhances `_index.md` and `glossary-quick.md` → `/wiki compile` → CHANGELOG What's New → commit + push
+- Source of truth for steps: `agents/fpf-sync.md` (the routine reads this file each run)
+- Manage at: https://claude.ai/code/routines/trig_01P7UzjrjgsgzLpMHn84bMoo
 
-**GitHub Action** (`.github/workflows/rebuild-sections.yml`):
-- Hook: push to main with FPF-Spec.md change → Python rebuild
-- Cron: 1st and 15th of each month, 09:00 UTC → auto-sync fork + rebuild
-
-**Claude Code Remote Trigger** (every 2 weeks):
-- Same schedule → syncs upstream → Python rebuild → AI-enhances `_index.md` and `glossary-quick.md` with plain-language summaries
-- Manage at: https://claude.ai/code/scheduled
+A previous GitHub Action (`.github/workflows/rebuild-sections.yml`) covered the same flow but consistently failed and was removed — the remote routine replaces it.
 
 ## Changelog & Versioning
 

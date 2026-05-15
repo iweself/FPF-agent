@@ -618,8 +618,7 @@ FPF-agent/
 │   ├── build_embeddings.py   #   FAISS-индекс (uv run)
 │   └── semantic_search.py    #   Поиск по индексу (uv run)
 ├── .codex-plugin/            # Манифест Codex-плагина
-├── .claude-plugin/           # Манифест Claude Code-плагина
-└── .github/workflows/        # CI: автопересборка при изменении спецификации
+└── .claude-plugin/           # Манифест Claude Code-плагина
 ```
 
 ---
@@ -650,16 +649,12 @@ uv run scripts/semantic_search.py "запрос" --top-k 5
 
 ## Автообновление
 
-Два уровня синхронизации:
+Синхронизация с upstream происходит через **Claude Code Remote Routine** (`trig_01P7UzjrjgsgzLpMHn84bMoo`):
 
-**GitHub Action** (`.github/workflows/rebuild-sections.yml`):
-- При push в main с изменением FPF-Spec.md — автоматическая пересборка
-- 1-го и 15-го числа каждого месяца — синхронизация с upstream-форком + пересборка
-
-**Claude Code Remote Trigger** (раз в 2 недели):
-- Синхронизация с upstream
-- Python-пересборка
-- AI-обогащение `_index.md` и `glossary-quick.md` читаемыми описаниями
+- Расписание: 1-го и 15-го числа каждого месяца, 07:00 UTC (= 09:00 Europe/Belgrade)
+- Полный пайплайн: `git fetch upstream` → merge (конфликт по `Readme.md` решается автоматически в нашу пользу) → `bash scripts/rebuild_all.sh` → AI-обогащение `_index.md` и `glossary-quick.md` читаемыми описаниями → `/wiki compile` → запись "What's New" в `CHANGELOG.md` → commit + push
+- Источник правды по шагам: [agents/fpf-sync.md](agents/fpf-sync.md)
+- Управление расписанием: https://claude.ai/code/routines/trig_01P7UzjrjgsgzLpMHn84bMoo
 
 ---
 
